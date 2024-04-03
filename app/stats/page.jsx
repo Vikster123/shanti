@@ -1,79 +1,82 @@
-"use client";
-import React, { useState } from 'react';
-import Link from 'next/link';
-import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend,
-  } from 'chart.js';
+"use client"
+import React, { useState, useEffect } from 'react';
+import { Chart, registerables } from 'chart.js';
+import { Line } from 'react-chartjs-2';
 
-  
+Chart.register(...registerables);
 
-const MoodPage = () => {
-  const [mood, setMood] = useState('');
+const options = {
+  responsive: true,
+  plugins: {
+    legend: {
+      display: false, 
+    },
+    tooltip: {
+      
+    },
+  },
+  scales: {
+    y: {
+      beginAtZero: true,
+      min: 0,
+      max: 10, // Assuming your mood scale goes up to 10
+      stepSize: 1,
+    },
+    x: {
+    },
+  },
+};
+
+export default function MoodChart() {
+  const [moodData, setMoodData] = useState({ days: [], moodRatings: [] });
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState('');
 
-  // Function to submit mood data to the API
-  const submitMoodData = (moodData) => {
+  useEffect(() => {
     setIsLoading(true);
-    fetch("https://api.apispreadsheets.com/data/pUrJZ2f4dFTu3mOc/", {
-      method: "POST",
-      headers: {
-        'Content-Type': 'application/json'
+    fetch("https://api.apispreadsheets.com/data/o4uIKexThbokIq3U/")
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+        throw new Error('Failed to fetch mood data.');
+      })
+      .then((data) => {
+        // Extract days and mood ratings from the data
+        const days = data.data.map(item => `Day ${item.Day}`);
+        const moodRatings = data.data.map(item => item["Mood Rating"]);
+        setMoodData({ days, moodRatings });
+      })
+      .catch((error) => {
+        setMessage(error.message);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  }, []);
+
+  const chartData = {
+    labels: moodData.days,
+    datasets: [
+      {
+        label: 'Daily Mood Scale',
+        data: moodData.moodRatings,
+        borderColor: 'rgba(75,192,192,1)',
+        backgroundColor: 'rgba(75,192,192,0.2)',
+        fill: true,
       },
-      body: JSON.stringify({ "data": moodData }),
-    }).then(res => {
-      setIsLoading(false);
-      if (res.status === 201) {
-        setMessage('Your mood has been recorded successfully!');
-      } else {
-        setMessage('Failed to record your mood. Please try again.');
-      }
-    }).catch(error => {
-      setIsLoading(false);
-      setMessage('An error occurred. Please try again.');
-    });
+    ],
   };
 
-  
-
-  // Handler for when a mood is selected
-  const handleMoodSelection = (event) => {
-    const selectedMood = event.target.value;
-    setMood(selectedMood);
-
-    const moodData = {
-      Date: new Date().toISOString().split('T')[0],
-      Time: new Date().toTimeString().split(' ')[0],
-      User: 'admin', // Replace with actual user ID or some identifier
-      Emotion: selectedMood,
-      MoodRating: moodRating // Logic to convert mood to a rating
-    };
-
-    submitMoodData(moodData);
-  };
-
-  
-
-  
-  const styles = {
-    // ... Add your CSS styles as before
-  };
-
-  // JSX for your component, including event handlers that call handleMoodSelection
   return (
-    <div style={styles.moodPage}>
-      {isLoading && <p>Loading...</p>}
-      {message && <p>{message}</p>}
-      
+    <div>
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : message ? (
+        <p>{message}</p>
+      ) : (
+        <Line data={chartData} options={options} />
+      )}
     </div>
   );
-};
-
-export default MoodPage;
+}

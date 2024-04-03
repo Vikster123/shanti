@@ -4,10 +4,58 @@ import Link from 'next/link'
 
 const MoodRatingPage = () => {
   // Add your own logic to handle mood rating
+  // const handleMoodRating = (rating) => {
+  //   console.log(`User rated mood as: ${rating}`);
+    // Implement what happens when a user rates their mood
+
+    const router = useRouter(); // Initialize useRouter for navigation
+
+  // Function to update the spreadsheet with mood rating and username
+  const updateSpreadsheet = (username, moodRating) => {
+    const today = new Date();
+    const updateData = {
+      //Day: today.toISOString().split('T')[0],
+      User: username,
+      'Mood Rating': moodRating
+    };
+
+    fetch('https://api.apispreadsheets.com/data/o4uIKexThbokIq3U/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ data: [updateData] })
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log('Spreadsheet updated successfully', data);
+      // Navigate to another page or show a message after successful update
+      router.push('/mood'); // Navigate to a mood page or back to the main page
+    })
+    .catch(error => {
+      console.error('Failed to update mood data.', error);
+      alert('Failed to update mood data.');
+    });
+  };
+
   const handleMoodRating = (rating) => {
     console.log(`User rated mood as: ${rating}`);
-    // Implement what happens when a user rates their mood
+    // Retrieve the username from local storage
+    const username = localStorage.getItem('username');
+    if (!username) {
+      alert('User not identified, please log in.');
+      router.push('/login'); // Redirect to login page
+      return;
+    }
+    // Update the spreadsheet with the mood rating and username
+    updateSpreadsheet(username, rating);
   };
+
 
   // Inline styles
   const styles = {

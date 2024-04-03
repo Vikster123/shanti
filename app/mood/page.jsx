@@ -11,16 +11,71 @@ const MoodPage = () => {
     setMood(e.target.value);
   };
 
+  // const handleDontKnowClick = () => {
+  //   // Check if a mood has been selected
+  //   if (mood) {
+  //     // Navigate to a route like "/mood/[moodName]", where moodName is dynamic
+  //     router.push(`/emotions/${mood.toLowerCase()}`);
+  //   } else {
+  //     // Optionally handle the case where no mood is selected
+  //     alert('Please select a mood first.');
+  //   }
+  // };
+
+  const updateSpreadsheet = (selectedMood) => {
+
+    const username = localStorage.getItem('username');
+
+  // Check if username is not found, which means the user is not logged in
+  if (!username) {
+    alert('User not identified, please log in.');
+    // Optionally, redirect the user to the login page
+    router.push('/login'); 
+    return; // Exit the function if no user is found
+  }
+    
+    const updateData = {
+       //Day: today.toISOString().split('T')[0],
+       //User: 'user1', // This should be dynamically set according to your application's user system
+      // Emotion: selectedMood,
+       //'Mood Rating': 5, // Placeholder value, this should be updated accordingly
+
+      User: username, // Use the retrieved username
+      Emotion: selectedMood, // The selected emotion to update
+      
+    };
+
+    fetch('https://api.apispreadsheets.com/data/o4uIKexThbokIq3U/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        // Include other headers if required, such as authorization tokens
+      },
+      body: JSON.stringify({ data: [updateData] })
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      
+      router.push(`/emotions/${selectedMood.toLowerCase()}`);
+    })
+    .catch(error => {
+      alert('Failed to move to the next page.');
+    });
+  };
+
   const handleDontKnowClick = () => {
-    // Check if a mood has been selected
     if (mood) {
-      // Navigate to a route like "/mood/[moodName]", where moodName is dynamic
-      router.push(`/emotions/${mood.toLowerCase()}`);
+      updateSpreadsheet(mood);
     } else {
-      // Optionally handle the case where no mood is selected
       alert('Please select a mood first.');
     }
   };
+
 
   const styles = {
     moodPage: {
@@ -292,7 +347,11 @@ const MoodPage = () => {
             Home
           </Link>
         </button>
-        <button style={styles.navButton}>Stats</button>
+        <button style={styles.navButton}>
+        <Link href="/stats">
+          Stats
+          </Link>
+          </button>
         <button style={styles.navButton}>
           <Link href="/badges">
             Badges

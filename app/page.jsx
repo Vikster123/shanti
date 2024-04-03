@@ -74,16 +74,59 @@ export default function Home() {
   };
 
 
+  // const handleLogin = async (event) => {
+  //   event.preventDefault();
+  //   console.log('Logging in with', username, password); // Debugging line to check the input values
+    
+  //   // Check if the username exists and the password matches
+  //   if (userCredentials.hasOwnProperty(username) && userCredentials[username] === password) {
+  //     console.log('Credentials are valid'); // Debugging line
+  //     router.push('/intro');
+  //   } else {
+  //     console.error('Invalid username or password.'); // Debugging line
+  //     alert('Invalid username or password.');
+  //   }
+  // };
+
+  const updateSpreadsheet = (username) => {
+    const today = new Date();
+    const updateData = {
+      Day: today.toISOString().split('T')[0], // Include the date if necessary
+      User: username, // Only update the username
+    };
+
+    fetch('https://api.apispreadsheets.com/data/o4uIKexThbokIq3U/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ data: [updateData] })
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log('Spreadsheet updated successfully', data);
+      router.push('/intro'); // Adjust the redirect as necessary
+    })
+    .catch(error => {
+      console.error('Failed to move to the next page', error);
+      alert('Failed to move to the next page.');
+    });
+  };
+
   const handleLogin = async (event) => {
     event.preventDefault();
-    console.log('Logging in with', username, password); // Debugging line to check the input values
     
-    // Check if the username exists and the password matches
-    if (userCredentials.hasOwnProperty(username) && userCredentials[username] === password) {
-      console.log('Credentials are valid'); // Debugging line
-      router.push('/intro');
+    if (Object.hasOwnProperty.call(userCredentials, username) && userCredentials[username] === password) {
+      console.log('Credentials are valid');
+      localStorage.setItem('username', username); // Store the username
+      updateSpreadsheet(username); // Update the spreadsheet with the username
     } else {
-      console.error('Invalid username or password.'); // Debugging line
+      console.error('Invalid username or password.');
       alert('Invalid username or password.');
     }
   };
