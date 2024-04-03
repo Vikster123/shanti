@@ -70,6 +70,8 @@ const MoodPage = () => {
 
   const handleDontKnowClick = () => {
     if (mood) {
+      // Navigate to a route like "/mood/[moodName]", where moodName is dynamic
+      router.push(`/emotions?mood=${mood.toLowerCase()}`);
       updateSpreadsheet(mood);
     } else {
       alert('Please select a mood first.');

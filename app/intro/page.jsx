@@ -1,11 +1,12 @@
 "use client"
 import React from 'react';
 import Link from 'next/link';
-
+import { useLoginContextData } from '@/context/loginContext';
 
 const HomePage = () => {
   // Replace '[Name]' with the actual logic to retrieve the user's name
   const userName = 'admin'; 
+  const {loggedInUserName} = useLoginContextData();
 
   // Inline styles to match the design
   const styles = {
@@ -63,7 +64,7 @@ const HomePage = () => {
         <h1>Shanti</h1>
       </header>
       <main style={styles.mainContent}>
-        <h2 style={styles.greeting}>Hey, {userName}</h2>
+        <h2 style={styles.greeting}>Hey, {loggedInUserName ? loggedInUserName : 'User'}</h2>
         <p>Greet the day with positive vibes.</p>
         <hr />
         <p>How are you feeling today?</p>

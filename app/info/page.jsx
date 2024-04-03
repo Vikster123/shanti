@@ -53,7 +53,7 @@ const InfoPage = () => {
     <div style={styles.infoPage}>
       {/* Assuming you have an image component or an image file */}
       <img src="/generate_flower.png"  alt="Logo" width={300} height={300} style={{ marginBottom: '30px' }} />
-      <h1 style={styles.title}>It's okay to not know how you feel.</h1>
+      <h1 style={styles.title}>{`It's okay to not know how you feel.`}</h1>
 
       <button
         style={styles.button}

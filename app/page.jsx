@@ -2,14 +2,14 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from 'next/navigation';
-
-
-
+import { useLoginContextData } from '@/context/loginContext';
 
 export default function Home() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const router = useRouter();
+  const {setLoggedInUserName, setLoggedInUserId} = useLoginContextData();
+
 
   const containerStyle = {
     fontFamily: "'Arial', sans-serif",
@@ -54,24 +54,23 @@ export default function Home() {
     fontSize: "16px",
   };
 
-  const userCredentials = {
-    user1: 'password1',
-    user2: 'password2',
-    user3: 'password3',
-    user4: 'password4',
-    user5: 'password5',
-    user6: 'password6',
-    user7: 'password7',
-    user8: 'password8',
-    user9: 'password9',
-    user10: 'password10',
-    user11: 'password11',
-    user12: 'password12',
-    user13: 'password13',
-    user14: 'password14',
-    user15: 'password15'
-
-  };
+  const userCredentials = [
+    { userName: "user1", userId: 1, password: "password1" },
+    { userName: "user2", userId: 2, password: "password2" },
+    { userName: "user3", userId: 3, password: "password3" },
+    { userName: "user4", userId: 4, password: "password4" },
+    { userName: "user5", userId: 5, password: "password5" },
+    { userName: "user6", userId: 6, password: "password6" },
+    { userName: "user7", userId: 7, password: "password7" },
+    { userName: "user8", userId: 8, password: "password8" },
+    { userName: "user9", userId: 9, password: "password9" },
+    { userName: "user10", userId: 10, password: "password10" },
+    { userName: "user11", userId: 11, password: "password11" },
+    { userName: "user12", userId: 12, password: "password12" },
+    { userName: "user13", userId: 13, password: "password13" },
+    { userName: "user14", userId: 14, password: "password14" },
+    { userName: "user15", userId: 15, password: "password15" }
+  ]
 
 
   // const handleLogin = async (event) => {
@@ -120,13 +119,15 @@ export default function Home() {
 
   const handleLogin = async (event) => {
     event.preventDefault();
-    
-    if (Object.hasOwnProperty.call(userCredentials, username) && userCredentials[username] === password) {
-      console.log('Credentials are valid');
-      localStorage.setItem('username', username); // Store the username
-      updateSpreadsheet(username); // Update the spreadsheet with the username
+    // Check if the username exists and the password matches
+    const userExists = userCredentials.find((obj) => {
+      return obj.userName === username && obj.password === password;
+    });
+    if(userExists) {
+      setLoggedInUserName(userExists.userName);
+      setLoggedInUserId(userExists.userId)
+      router.push('/intro');
     } else {
-      console.error('Invalid username or password.');
       alert('Invalid username or password.');
     }
   };
