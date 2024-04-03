@@ -126,6 +126,7 @@ export default function Home() {
     if(userExists) {
       setLoggedInUserName(userExists.userName);
       setLoggedInUserId(userExists.userId)
+      localStorage.setItem('username', userExists.userName)
       router.push('/intro');
     } else {
       alert('Invalid username or password.');

@@ -22,7 +22,7 @@ const MoodPage = () => {
   //   }
   // };
 
-  const updateSpreadsheet = (selectedMood) => {
+  const updateSpreadsheet = (userData, selectedMood) => {
 
     const username = localStorage.getItem('username');
 
@@ -34,16 +34,16 @@ const MoodPage = () => {
     return; // Exit the function if no user is found
   }
     
-    const updateData = {
-       //Day: today.toISOString().split('T')[0],
-       //User: 'user1', // This should be dynamically set according to your application's user system
-      // Emotion: selectedMood,
-       //'Mood Rating': 5, // Placeholder value, this should be updated accordingly
+    // const updateData = {
+    //    //Day: today.toISOString().split('T')[0],
+    //    //User: 'user1', // This should be dynamically set according to your application's user system
+    //   // Emotion: selectedMood,
+    //    //'Mood Rating': 5, // Placeholder value, this should be updated accordingly
 
-      User: username, // Use the retrieved username
-      Emotion: selectedMood, // The selected emotion to update
+    //   User: username, // Use the retrieved username
+    //   Emotion: selectedMood, // The selected emotion to update
       
-    };
+    // };
 
     fetch('https://api.apispreadsheets.com/data/o4uIKexThbokIq3U/', {
       method: 'POST',
@@ -51,28 +51,30 @@ const MoodPage = () => {
         'Content-Type': 'application/json',
         // Include other headers if required, such as authorization tokens
       },
-      body: JSON.stringify({ data: [updateData] })
+      body: JSON.stringify({ data: [userData] })
     })
     .then(response => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-      return response.json();
+      return response;
     })
     .then(data => {
-      
       router.push(`/emotions/${selectedMood.toLowerCase()}`);
     })
     .catch(error => {
-      alert('Failed to move to the next page.');
+      console.log('Failed to move to the next page.');
     });
   };
 
   const handleDontKnowClick = () => {
     if (mood) {
       // Navigate to a route like "/mood/[moodName]", where moodName is dynamic
+      const userData = JSON.parse(sessionStorage.getItem("user_data"))
+      userData['emotion'] = mood
+      
+      updateSpreadsheet(userData, mood);
       router.push(`/emotions?mood=${mood.toLowerCase()}`);
-      updateSpreadsheet(mood);
     } else {
       alert('Please select a mood first.');
     }

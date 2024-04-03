@@ -1,6 +1,9 @@
 "use client"
 import React from 'react';
 import Link from 'next/link'
+// import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
+
 
 const MoodRatingPage = () => {
   // Add your own logic to handle mood rating
@@ -19,13 +22,14 @@ const MoodRatingPage = () => {
       'Mood Rating': moodRating
     };
 
-    fetch('https://api.apispreadsheets.com/data/o4uIKexThbokIq3U/', {
+    const resp = fetch('https://api.apispreadsheets.com/data/o4uIKexThbokIq3U/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ data: [updateData] })
     })
+
     .then(response => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -53,7 +57,15 @@ const MoodRatingPage = () => {
       return;
     }
     // Update the spreadsheet with the mood rating and username
-    updateSpreadsheet(username, rating);
+    // updateSpreadsheet(username, rating);
+    const today = new Date();
+    const userData  = {
+        Day: today.toISOString().split('T')[0],
+        User: username,
+        'Mood Rating': rating,
+        'emotion':''
+    }
+    sessionStorage.setItem("user_data", JSON.stringify(userData))
   };
 
 
