@@ -15,7 +15,7 @@ const MoodPage = () => {
     // Check if a mood has been selected
     if (mood) {
       // Navigate to a route like "/mood/[moodName]", where moodName is dynamic
-      router.push(`/emotions/${mood.toLowerCase()}`);
+      router.push(`/emotions?mood=${mood.toLowerCase()}`);
     } else {
       // Optionally handle the case where no mood is selected
       alert('Please select a mood first.');

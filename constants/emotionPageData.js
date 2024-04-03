@@ -1,168 +1,168 @@
-const pageObject = [
-    {
-      pageLabel: 'HAPPY',
-      subMsg: 'A little reminder:',
-      msg1: 'The perfect moment is right now. You got this!',
-      question1: 'What makes you feel happy or joyful?',
-      question2: 'What have you done to make you feel happy?',
-    },
-    {
-      pageLabel: 'EXCITED',
-      subMsg: 'An affirmation for you.',
-      msg1: 'I am building myself a better life each day.',
-      question1: 'What is influencing your excitement?',
-      question2: 'Are you excited for someone or something?',
-    },
-    {
+export const pageObject = [
+  {
+    pageLabel: 'HAPPY',
+    subMsg: 'A little reminder:',
+    msg1: 'The perfect moment is right now. You got this!',
+    question1: 'What makes you feel happy or joyful?',
+    question2: 'What have you done to make you feel happy?',
+  },
+  {
+    pageLabel: 'EXCITED',
+    subMsg: 'An affirmation for you.',
+    msg1: 'I am building myself a better life each day.',
+    question1: 'What is influencing your excitement?',
+    question2: 'Are you excited for someone or something?',
+  },
+  {
+
+    pageLabel:
+'GRATEFUL',
+
+    subMsg:
+'An affirmation for you.',
+
+    msg1:
+'I am grateful for things that bring me joy.',
+
+    question1:
+'What are you grateful for right now?',
+
+    question2:
+'What are you grateful for in your life?',
+
+  },
+
+  {
 
       pageLabel:
-'GRATEFUL',
+'HOPEFUL',
 
       subMsg:
 'An affirmation for you.',
 
       msg1:
-'I am grateful for things that bring me joy.',
-
-      question1:
-'What are you grateful for right now?',
-
-      question2:
-'What are you grateful for in your life?',
-
-    },
-
-    {
-
-        pageLabel:
-'HOPEFUL',
-
-        subMsg:
-'An affirmation for you.',
-
-        msg1:
 'You have what it takes to achieve anything you set your mind to.',
 
-        question1:
+      question1:
 'Are you taking action to make your hopes come true?',
 
-        question2:
+      question2:
 'If so, what are you doing to make your hopes come true?',
 
-    },
+  },
 
-    {
+  {
 
-        pageLabel:
+      pageLabel:
 'SCARED',
 
-        subMsg:
+      subMsg:
 'A little reminder:',
 
-        msg1:
+      msg1:
 'You are in control of your life and emotions.',
 
-        question1:
+      question1:
 'What are you scared or worried about?',
 
-        question2:
+      question2:
 'Are the factors of your fear in your control?',
 
-    },
+  },
 
-    {
+  {
 
-        pageLabel:
+      pageLabel:
 'SAD',
 
-        subMsg:
+      subMsg:
 'An affirmation for you.',
 
-        msg1:
+      msg1:
 'I trust that I am on the right path.',
 
-        question1:
+      question1:
 'What or who is driving your sadness?',
 
-        question2:
+      question2:
 'Did you tell someone how you feel? ',
 
-    },
+  },
 
-    {
+  {
 
-        pageLabel:
+      pageLabel:
 'FRUSTRATED',
 
-        subMsg:
+      subMsg:
 '',
 
-        msg1:
+      msg1:
 'It’s okay to feel frustrated.Other people feel frustrated too.',
 
-        question1:
+      question1:
 'What are you feeling frustrated about?',
 
-        question2:
+      question2:
 'Why are you frustrated about it?',
 
-    },
+  },
 
-    {
+  {
 
-        pageLabel:
+      pageLabel:
 'OVERWHELMED',
 
-        subMsg:
+      subMsg:
 '',
 
-        msg1:
+      msg1:
 'You are confident and capable. Don’t sweat it. You got this.',
 
-        question1:
+      question1:
 'Why do you feel the way you do?',
 
-        question2:
+      question2:
 'Are you sure you feel the way you think you do?',
 
-    },
+  },
 
-    {
+  {
 
-        pageLabel:
+      pageLabel:
 'CALM',
 
-        subMsg:
+      subMsg:
 '',
 
-        msg1:
+      msg1:
 'Calm is a sense of peacefulness. The perfect time to get things done.',
 
-        question1:
+      question1:
 'What caused you to feel calm?',
 
-        question2:
+      question2:
 'How do you become calm in tough situations?',
 
-    },
+  },
 
-    {
+  {
 
-        pageLabel:
+      pageLabel:
 'LONELY',
 
-        subMsg:
+      subMsg:
 '',
 
-        msg1:
+      msg1:
 'You are loved. Your loneliness will pass.',
 
-        question1:
+      question1:
 'Why are you feeling lonely right now?',
 
-        question2:
+      question2:
 'How often do you feel left out or lonely?',
 
-    },
+  },
 
-  ];
+];
