@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import Image from "next/image";
 
 const MoodPage = () => {
   const [mood, setMood] = useState('');
@@ -60,7 +61,7 @@ const MoodPage = () => {
       return response;
     })
     .then(data => {
-      router.push(`/emotions/${selectedMood.toLowerCase()}`);
+      //router.push(`/emotions/${selectedMood.toLowerCase()}`);
     })
     .catch(error => {
       console.log('Failed to move to the next page.');
@@ -155,6 +156,13 @@ const MoodPage = () => {
       msg1: 'The perfect moment is right now. You got this!',
       question1: 'What makes you feel happy or joyful?',
       question2: 'What have you done to make you feel happy?',
+      pageLabel2: 'How Can I Stay Happy?',
+        subMsg3: 'Do what you love',
+        subMsg4: 'Create a goal',
+        subMsg5: 'Work on a goal you created',
+        subMsg6: 'Do something you wanted to do for a long time',
+        subMsg7: 'Do something kind for someone',
+      imageUrl:"/Image1.png"
     },
     {
       pageLabel: 'EXCITED',
@@ -162,6 +170,13 @@ const MoodPage = () => {
       msg1: 'I am building myself a better life each day.',
       question1: 'What is influencing your excitement?',
       question2: 'Are you excited for someone or something?',
+      pageLabel2: 'How Can I Use my Excitement?',
+        subMsg3: 'Do what you love',
+        subMsg4: 'Do something out of your comfort zone',
+        subMsg5: 'Think about the present- what are you excited for right now',
+        subMsg6: 'Share your excitement with others',
+        subMsg7: 'Take a walk to your new place',
+      imageUrl:"/Image2.png"
     },
     {
 
@@ -179,6 +194,14 @@ const MoodPage = () => {
 
       question2:
 'What are you grateful for in your life?',
+
+pageLabel2: 'How Can I Stay Grateful?',
+        subMsg3: 'Do what you love',
+        subMsg4: 'Create a goal',
+        subMsg5: 'Work on a goal you created',
+        subMsg6: 'Do something you wanted to do for a long time',
+        subMsg7: 'Do something kind for someone',
+imageUrl:"/Image3.png"
 
     },
 
@@ -199,6 +222,15 @@ const MoodPage = () => {
         question2:
 'If so, what are you doing to make your hopes come true?',
 
+pageLabel2: 'How Can I Stay Hopeful?',
+        subMsg3: 'Do what you love',
+        subMsg4: 'Create a goal',
+        subMsg5: 'Work on a goal you created',
+        subMsg6: 'Do something you wanted to do for a long time',
+        subMsg7: 'Do something kind for someone',
+
+imageUrl:"/Image4.png"
+
     },
 
     {
@@ -217,6 +249,13 @@ const MoodPage = () => {
 
         question2:
 'Are the factors of your fear in your control?',
+pageLabel2: 'How Can I Stay Happy?',
+        subMsg3: 'Do what you love',
+        subMsg4: 'Create a goal',
+        subMsg5: 'Work on a goal you created',
+        subMsg6: 'Do something you wanted to do for a long time',
+        subMsg7: 'Do something kind for someone',
+imageUrl:"/Image5.png"
 
     },
 
@@ -236,6 +275,13 @@ const MoodPage = () => {
 
         question2:
 'Did you tell someone how you feel? ',
+pageLabel2: 'How Can I Stay Happy?',
+        subMsg3: 'Do what you love',
+        subMsg4: 'Create a goal',
+        subMsg5: 'Work on a goal you created',
+        subMsg6: 'Do something you wanted to do for a long time',
+        subMsg7: 'Do something kind for someone',
+imageUrl:"/Image6.png"
 
     },
 
@@ -255,6 +301,13 @@ const MoodPage = () => {
 
         question2:
 'Why are you frustrated about it?',
+pageLabel2: 'How Can I Stay Happy?',
+        subMsg3: 'Do what you love',
+        subMsg4: 'Create a goal',
+        subMsg5: 'Work on a goal you created',
+        subMsg6: 'Do something you wanted to do for a long time',
+        subMsg7: 'Do something kind for someone',
+imageUrl:"/Image7.png"
 
     },
 
@@ -274,6 +327,13 @@ const MoodPage = () => {
 
         question2:
 'Are you sure you feel the way you think you do?',
+pageLabel2: 'How Can I Stay Happy?',
+        subMsg3: 'Do what you love',
+        subMsg4: 'Create a goal',
+        subMsg5: 'Work on a goal you created',
+        subMsg6: 'Do something you wanted to do for a long time',
+        subMsg7: 'Do something kind for someone',
+imageUrl:"/Image8.png"
 
     },
 
@@ -293,6 +353,14 @@ const MoodPage = () => {
 
         question2:
 'How do you become calm in tough situations?',
+pageLabel2: 'How Can I Stay Happy?',
+        subMsg3: 'Do what you love',
+        subMsg4: 'Create a goal',
+        subMsg5: 'Work on a goal you created',
+        subMsg6: 'Do something you wanted to do for a long time',
+        subMsg7: 'Do something kind for someone',
+
+imageUrl:"/Image8.png"
 
     },
 
@@ -312,6 +380,13 @@ const MoodPage = () => {
 
         question2:
 'How often do you feel left out or lonely?',
+pageLabel2: 'How Can I Stay Happy?',
+        subMsg3: 'Do what you love',
+        subMsg4: 'Create a goal',
+        subMsg5: 'Work on a goal you created',
+        subMsg6: 'Do something you wanted to do for a long time',
+        subMsg7: 'Do something kind for someone',
+imageUrl:"/Image9.png"
 
     },
 
