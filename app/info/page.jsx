@@ -36,12 +36,14 @@ const InfoPage = () => {
       borderRadius: '20px',
     },
     bottomNav: {
-      position: 'absolute',
-      bottom: '0',
-      width: '100%',
+      position: 'fixed', // Changed from 'flex' to 'fixed'
+      bottom: '0', // Set to '0' to stick to the bottom
+      left: '0', // Align to the left side
+      width: '100%', // Full width
       display: 'flex',
       justifyContent: 'space-around',
       borderTop: '1px solid #000',
+      backgroundColor: '#f8f4e4', // Match the background color of your app
     },
     navButton: {
       padding: '10px 20px',

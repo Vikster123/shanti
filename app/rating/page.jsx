@@ -72,7 +72,7 @@ const MoodRatingPage = () => {
   // Inline styles
   const styles = {
     moodRatingPage: {
-      fontFamily: 'Times New Roman, serif',
+      fontFamily: 'Libre Franklin',
       color: '#333',
       padding: '40px',
       background: '#f8f4e4',
@@ -100,13 +100,33 @@ const MoodRatingPage = () => {
     moodIcon: {
       // Add your styles for the mood icons
     },
+    scaleButton: {
+      // Define styles for the scale buttons here
+      background: 'none', // No background to make it transparent
+      border: '2px solid #333', // Solid border with the color of your choice
+      borderRadius: '50%', // Circular buttons
+      width: '40px', // Width of the button (increase for larger buttons)
+      height: '40px', // Height of the button (increase for larger buttons)
+      margin: '5px', // Margin around the buttons
+      fontSize: '16px', // Font size of the number inside the button
+      cursor: 'pointer',
+      lineHeight: '40px', // Center the number vertically
+      textAlign: 'center', // Center the number horizontally
+    },  
     bottomNav: {
-      position: 'absolute',
-      bottom: '0',
-      width: '100%',
+      position: 'fixed', // Changed from 'flex' to 'fixed'
+      bottom: '0', // Set to '0' to stick to the bottom
+      left: '0', // Align to the left side
+      width: '100%', // Full width
       display: 'flex',
       justifyContent: 'space-around',
       borderTop: '1px solid #000',
+      backgroundColor: '#f8f4e4', // Match the background color of your app
+    },
+    navImage: {
+      // You might want to set a specific width and height for your image
+      width: '50px', // example size
+      height: '50px', // example size
     },
     navButton: {
       padding: '10px 20px',
@@ -122,7 +142,7 @@ const MoodRatingPage = () => {
         <span style={styles.moodIcon}>😟</span>
         <Link href="/mood"> 
         {Array.from({ length: 10 }, (_, i) => (
-          <button key={i + 1} onClick={() => handleMoodRating(i + 1)}>
+          <button key={i + 1} onClick={() => handleMoodRating(i + 1)} style={styles.scaleButton}>
             {i + 1}
           </button>
         ))}
@@ -130,9 +150,21 @@ const MoodRatingPage = () => {
         <span style={styles.moodIcon}>😊</span>
       </div>
       <div style={styles.bottomNav}>
-        <button style={styles.navButton}>Home</button>
-        <button style={styles.navButton}>Stats</button>
-        <button style={styles.navButton}>Badges</button>
+        <button style={styles.navButton}>
+          <Link href="/">
+          <img src="/home.png" alt="Home" style={styles.navImage} />
+          </Link>
+        </button>
+        <button style={styles.navButton}>
+        <Link href="/stats">
+        <img src="/stats.png" alt="Stats" style={styles.navImage} />
+          </Link>
+          </button>
+        <button style={styles.navButton}>
+          <Link href="/badges">
+          <img src="/badges.png" alt="Badges" style={styles.navImage} />
+          </Link>
+        </button>
       </div>
     </div>
   );

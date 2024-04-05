@@ -24,19 +24,23 @@ const moodName = params.get('mood')
   const pageStyles = {
     background: '#f5f5dc', // This is a beige color, adjust as needed
     minHeight: '100vh', // Ensure the background color covers the whole page
-    padding: '20px', // Adjust padding as needed
+    padding: '30px', // Adjust padding as needed
     boxSizing: 'border-box', // Make sure paddings don't affect the width calculations
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-  };
+  }
   
 
   return (
     <div style={pageStyles}> 
-      <img src={moodData.imageUrl}  width={100} height={100} />
+    <div style={{ width: '400px', height: '400px', background: '#f5f5dc', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <img src={moodData.imageUrl} style={{ display: 'block' }}width="400" height="400" />
+      </div>
+      <a href={moodData.pageUrl} target="_blank" rel="noopener noreferrer">
       <p >{moodData.pageLabel}</p>
+      </a>
       <p >{moodData.subMsg}</p>
       <p >{moodData.msg1}</p>
       <p>{moodData.pageLabel2}</p>
@@ -47,6 +51,7 @@ const moodName = params.get('mood')
       <p >{moodData.subMsg7}</p>
 
       {/* ... other mood data ... */}
+      
     </div>
   );
 };

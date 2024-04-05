@@ -88,7 +88,7 @@ const MoodPage = () => {
       color: '#000',
       padding: '40px',
       background: '#f8f4e4',
-      minHeight: '100vh',
+      minHeight: '200vh',
     },
     header: {
       textAlign: 'center',
@@ -96,7 +96,7 @@ const MoodPage = () => {
     },
     mainHeading: {
       textAlign: 'center',
-      fontSize: '24px',
+      fontSize: '50px',
       margin: '40px 0',
     },
     moodOptions: {
@@ -130,23 +130,36 @@ const MoodPage = () => {
       margin: '20px auto',
     },
     bottomNav: {
-      position: 'absolute',
-      bottom: '0',
-      width: '100%',
+      position: 'fixed', // Changed from 'flex' to 'fixed'
+      bottom: '0', // Set to '0' to stick to the bottom
+      left: '0', // Align to the left side
+      width: '100%', // Full width
       display: 'flex',
       justifyContent: 'space-around',
       borderTop: '1px solid #000',
+      backgroundColor: '#f8f4e4', // Match the background color of your app
     },
     navButton: {
-      padding: '10px 20px',
+      padding: '10px 20px', // You can adjust padding to change the button size
       fontSize: '18px',
+      width: '150px', // Set width as desired
+      height: '50px', // Set height as desired
+      margin: '10px', // Optionally add margins
+      // Add other styles such as border, borderRadius, etc.
     },
+    navImage: {
+      // You might want to set a specific width and height for your image
+      width: '35px', // example size
+      height: '35px', // example size
+    },
+
     linkBack: {
       display: 'block',
       textAlign: 'center',
       marginTop: '20px',
       textDecoration: 'underline',
     },
+
   };
 
   const pageObject = [
@@ -389,6 +402,32 @@ pageLabel2: 'How Can I Stay Happy?',
 imageUrl:"/Image9.png"
 
     },
+    {
+    
+      pageLabel:
+'I DONT KNOW',
+
+      subMsg:
+'',
+
+      msg1:
+'Its ok to not know how you feel',
+
+      question1:
+'Do you have mixed feelings right now?',
+
+      question2:
+'How often do you feel this way?',
+pageLabel2: 'How to express your feelings',
+      subMsg3: 'Journal',
+      subMsg4: 'Talk to a loved one',
+      subMsg5: 'Go on a walk',
+      subMsg6: 'Do something you wanted to do for a long time',
+      subMsg7: 'Join a club',
+imageUrl:"/Image9.png",
+pageUrl: 'https://kidshealth.org/en/teens/happy-life.html'
+
+  }
 
   ];
 
@@ -423,17 +462,17 @@ imageUrl:"/Image9.png"
       <div style={styles.bottomNav}>
         <button style={styles.navButton}>
           <Link href="/">
-            Home
+          <img src="/home.png" alt="Home" style={styles.navImage} />
           </Link>
         </button>
         <button style={styles.navButton}>
         <Link href="/stats">
-          Stats
+        <img src="/stats.png" alt="Stats" style={styles.navImage} />
           </Link>
           </button>
         <button style={styles.navButton}>
           <Link href="/badges">
-            Badges
+          <img src="/badges.png" alt="Badges" style={styles.navImage} />
           </Link>
         </button>
       </div>

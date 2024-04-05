@@ -52,6 +52,11 @@ const HomePage = () => {
       justifyContent: 'space-around',
       borderTop: '1px solid #000',
     },
+    navImage: {
+      // You might want to set a specific width and height for your image
+      width: '35px', // example size
+      height: '35px', // example size
+    },
     navButton: {
       padding: '10px 20px',
       fontSize: '18px',
@@ -78,12 +83,20 @@ const HomePage = () => {
       </main>
       <div style={styles.bottomNav}>
         <button style={styles.navButton}>
-        <Link href="/">
-          Home
+          <Link href="/">
+          <img src="/home.png" alt="Home" style={styles.navImage} />
           </Link>
         </button>
-        <button style={styles.navButton}>Stats</button>
-        <button style={styles.navButton}>Badges</button>
+        <button style={styles.navButton}>
+        <Link href="/stats">
+        <img src="/stats.png" alt="Stats" style={styles.navImage} />
+          </Link>
+          </button>
+        <button style={styles.navButton}>
+          <Link href="/badges">
+          <img src="/badges.png" alt="Badges" style={styles.navImage} />
+          </Link>
+        </button>
       </div>
     </div>
   );
