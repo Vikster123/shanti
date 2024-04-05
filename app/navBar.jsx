@@ -42,12 +42,12 @@ export default function NavBar() {
         <div style={styles.navigation}>
             <button style={styles.navButton}>
                 <Link href="/">
-                <img src="/home.png" alt="Home" style={styles.navImage} />
+                <img src="/home1.png" alt="Home" style={styles.navImage} />
                 </Link>
             </button>
             <button style={styles.navButton}>
                 <Link href="/stats">
-                <img src="/stats.png" alt="Stats" style={styles.navImage} />
+                <img src="/stats1.png" alt="Stats" style={styles.navImage} />
                 </Link>
             </button>
             <button style={styles.navButton}>
