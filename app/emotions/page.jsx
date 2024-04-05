@@ -38,7 +38,7 @@ const EmotionDetailPage = () => {
       fontSize: '18px',
       display: 'block',
       width: 'auto',
-      margin: '20px 5px',
+      margin: '5px 5px',
     },
     pageStyles: {
       background: '#f5f5dc', // This is a beige color, adjust as needed
