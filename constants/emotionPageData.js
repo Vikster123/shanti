@@ -11,7 +11,8 @@ export const pageObject = [
             subMsg5: 'Work on a goal you created',
             subMsg6: 'Do something you wanted to do for a long time',
             subMsg7: 'Do something kind for someone',
-          imageUrl:"/Image1.png"
+          imageUrl:"/image9.png",
+          pageUrl: 'https://kidshealth.org/en/teens/happy-life.html'
         },
         {
           pageLabel: 'EXCITED',
@@ -19,14 +20,15 @@ export const pageObject = [
           msg1: 'I am building myself a better life each day.',
           question1: 'What is influencing your excitement?',
           question2: 'Are you excited for someone or something?',
-          pageLabel2: 'How Can I Stay Happy?',
+          pageLabel2: 'How Can I Stay Excited?',
             subMsg3: 'Do what you love',
             subMsg4: 'Create a goal',
             subMsg5: 'Work on a goal you created',
             subMsg6: 'Do something you wanted to do for a long time',
             subMsg7: 'Do something kind for someone',
     
-          imageUrl:"/Image2.png"
+          imageUrl:"/image9.png",
+          pageUrl: 'https://hackspirit.com/live-a-more-interesting-exciting-life/'
         },
         {
     
@@ -45,13 +47,14 @@ export const pageObject = [
           question2:
     'What are you grateful for in your life?',
     
-    pageLabel2: 'How Can I Stay Happy?',
+    pageLabel2: 'How Can I Stay Grateful?',
             subMsg3: 'Do what you love',
             subMsg4: 'Create a goal',
             subMsg5: 'Work on a goal you created',
             subMsg6: 'Do something you wanted to do for a long time',
             subMsg7: 'Do something kind for someone',
-    imageUrl:"/Image3.png"
+    imageUrl:"/image6.png",
+    pageUrl: 'https://kidshealth.org/en/teens/gratitude-practice.html'
     
         },
     
@@ -72,14 +75,15 @@ export const pageObject = [
             question2:
     'If so, what are you doing to make your hopes come true?',
     
-    pageLabel2: 'How Can I Stay Happy?',
+    pageLabel2: 'How Can I Stay Hopeful?',
             subMsg3: 'Do what you love',
             subMsg4: 'Create a goal',
             subMsg5: 'Work on a goal you created',
             subMsg6: 'Do something you wanted to do for a long time',
             subMsg7: 'Do something kind for someone',
     
-    imageUrl:"/Image4.png"
+    imageUrl:"/image7.png",
+    pageUrl: 'https://www.samaritans.org/how-we-can-help/if-youre-having-difficult-time/staying-hopeful/'
     
         },
     
@@ -99,13 +103,14 @@ export const pageObject = [
     
             question2:
     'Are the factors of your fear in your control?',
-    pageLabel2: 'How Can I Stay Happy?',
+    pageLabel2: 'How Can I Not Be Scared?',
             subMsg3: 'Do what you love',
             subMsg4: 'Create a goal',
             subMsg5: 'Work on a goal you created',
             subMsg6: 'Do something you wanted to do for a long time',
             subMsg7: 'Do something kind for someone',
-    imageUrl:"/Image5.png"
+    imageUrl:"/image2.png",
+    pageUrl: 'https://kidshealth.org/en/teens/phobias.html#:~:text=People%20can%20overcome%20unnecessary%20fears,sensations%20like%20takeoff%20or%20turbulence'
     
         },
     
@@ -125,13 +130,14 @@ export const pageObject = [
     
             question2:
     'Did you tell someone how you feel? ',
-    pageLabel2: 'How Can I Stay Happy?',
+    pageLabel2: 'How To Not Be Sad?',
             subMsg3: 'Do what you love',
             subMsg4: 'Create a goal',
             subMsg5: 'Work on a goal you created',
             subMsg6: 'Do something you wanted to do for a long time',
             subMsg7: 'Do something kind for someone',
-    imageUrl:"/Image6.png"
+    imageUrl:"/image4.png",
+    pageUrl: 'https://actionforhappiness.org/10-keys?utm_source=google&utm_campaign=AFH-5-10keys&https://actionforhappiness.org/join-us-confirmation/*&gad_source=1'
     
         },
     
@@ -151,13 +157,14 @@ export const pageObject = [
     
             question2:
     'Why are you frustrated about it?',
-    pageLabel2: 'How Can I Stay Happy?',
+    pageLabel2: 'How do I Not be Frustrated?',
             subMsg3: 'Do what you love',
             subMsg4: 'Create a goal',
             subMsg5: 'Work on a goal you created',
             subMsg6: 'Do something you wanted to do for a long time',
             subMsg7: 'Do something kind for someone',
-    imageUrl:"/Image7.png"
+    imageUrl:"/image0.png",
+    pageUrl: 'https://kidshealth.org/en/teens/happy-life.html'
     
         },
     
@@ -177,13 +184,14 @@ export const pageObject = [
     
             question2:
     'Are you sure you feel the way you think you do?',
-    pageLabel2: 'How Can I Stay Happy?',
+    pageLabel2: 'How Do I Not be overwhelmed?',
             subMsg3: 'Do what you love',
             subMsg4: 'Create a goal',
             subMsg5: 'Work on a goal you created',
             subMsg6: 'Do something you wanted to do for a long time',
             subMsg7: 'Do something kind for someone',
-    imageUrl:"/Image8.png"
+    imageUrl:"/image1.png",
+    pageUrl: 'https://kidshealth.org/en/teens/happy-life.html'
     
         },
     
@@ -203,14 +211,15 @@ export const pageObject = [
     
             question2:
     'How do you become calm in tough situations?',
-    pageLabel2: 'How Can I Stay Happy?',
+    pageLabel2: 'How Can I Stay Calm?',
             subMsg3: 'Do what you love',
             subMsg4: 'Create a goal',
             subMsg5: 'Work on a goal you created',
             subMsg6: 'Do something you wanted to do for a long time',
             subMsg7: 'Do something kind for someone',
     
-    imageUrl:"/Image8.png"
+    imageUrl:"/image6.png",
+    pageUrl: 'https://www.psychologicalhealthcare.com.au/blog/keep-calm-pressure/'
     
         },
     
@@ -230,14 +239,42 @@ export const pageObject = [
     
             question2:
     'How often do you feel left out or lonely?',
-    pageLabel2: 'How Can I Stay Happy?',
+    pageLabel2: 'How Do I Not Be Lonely?',
             subMsg3: 'Do what you love',
             subMsg4: 'Create a goal',
             subMsg5: 'Work on a goal you created',
             subMsg6: 'Do something you wanted to do for a long time',
             subMsg7: 'Do something kind for someone',
-    imageUrl:"/Image9.png"
+    imageUrl:"/image3.png",
+    pageUrl: 'https://kidshealth.org/en/teens/happy-life.html'
     
         },
+        {
+    
+                pageLabel:
+          'I DONT KNOW',
+          
+                subMsg:
+          '',
+          
+                msg1:
+          'Its ok to not know how you feel',
+          
+                question1:
+          'Do you have mixed feelings right now?',
+          
+                question2:
+          'How often do you feel this way?',
+          pageLabel2: 'How to express your feelings',
+                subMsg3: 'Journal',
+                subMsg4: 'Talk to a loved one',
+                subMsg5: 'Go on a walk',
+                subMsg6: 'Do something you wanted to do for a long time',
+                subMsg7: 'Join a club',
+          imageUrl:"/image10.png",
+          pageUrl: 'https://kidshealth.org/en/teens/emotional-awareness.html'
+          
+            }
+          
     
       ];

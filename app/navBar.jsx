@@ -37,17 +37,17 @@ export default function NavBar() {
         <div style={styles.navigation}>
             <button style={styles.navButton}>
                 <Link href="/">
-                    Home
+                <img src="/home.png" alt="Home" style={styles.navImage} />
                 </Link>
             </button>
             <button style={styles.navButton}>
                 <Link href="/stats">
-                    Stats
+                <img src="/stats.png" alt="Stats" style={styles.navImage} />
                 </Link>
             </button>
             <button style={styles.navButton}>
                 <Link href="/badges">
-                    Badges
+                <img src="/badges.png" alt="Badges" style={styles.navImage} />
                 </Link>
             </button>
         </div>
