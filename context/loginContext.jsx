@@ -17,9 +17,10 @@ const LoginContext = createContext(undefined);
 export const LoginContextProvider = ({ children }) => {
   const [loggedInUserId, setLoggedInUserId] = useState('');
   const [loggedInUserName, setLoggedInUserName] = useState('');
+  const [loggedInUserData, setLoggedInUserData] = useState([])
 
   return (
-    <LoginContext.Provider value={{ loggedInUserId, setLoggedInUserId, loggedInUserName, setLoggedInUserName}}>
+    <LoginContext.Provider value={{ loggedInUserId, setLoggedInUserId, loggedInUserName, setLoggedInUserName, loggedInUserData, setLoggedInUserData}}>
       {children}
     </LoginContext.Provider>
   );

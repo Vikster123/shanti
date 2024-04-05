@@ -8,7 +8,7 @@ export default function Home() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const router = useRouter();
-  const {setLoggedInUserName, setLoggedInUserId} = useLoginContextData();
+  const { setLoggedInUserName, setLoggedInUserId, setLoggedInUserData } = useLoginContextData();
 
 
   const containerStyle = {
@@ -76,7 +76,7 @@ export default function Home() {
   // const handleLogin = async (event) => {
   //   event.preventDefault();
   //   console.log('Logging in with', username, password); // Debugging line to check the input values
-    
+
   //   // Check if the username exists and the password matches
   //   if (userCredentials.hasOwnProperty(username) && userCredentials[username] === password) {
   //     console.log('Credentials are valid'); // Debugging line
@@ -101,20 +101,20 @@ export default function Home() {
       },
       body: JSON.stringify({ data: [updateData] })
     })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
-    .then(data => {
-      console.log('Spreadsheet updated successfully', data);
-      router.push('/intro'); // Adjust the redirect as necessary
-    })
-    .catch(error => {
-      console.error('Failed to move to the next page', error);
-      alert('Failed to move to the next page.');
-    });
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log('Spreadsheet updated successfully', data);
+        router.push('/intro'); // Adjust the redirect as necessary
+      })
+      .catch(error => {
+        console.error('Failed to move to the next page', error);
+        alert('Failed to move to the next page.');
+      });
   };
 
   const handleLogin = async (event) => {
@@ -123,10 +123,30 @@ export default function Home() {
     const userExists = userCredentials.find((obj) => {
       return obj.userName === username && obj.password === password;
     });
-    if(userExists) {
+    if (userExists) {
       setLoggedInUserName(userExists.userName);
       setLoggedInUserId(userExists.userId)
       localStorage.setItem('username', userExists.userName)
+      fetch('https://api.apispreadsheets.com/data/o4uIKexThbokIq3U/', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          const tempUserData = data.data.filter((item) => item.User === userExists.userName);  
+          setLoggedInUserData([...tempUserData])
+        })
+        .catch(error => {
+          console.error('Failed to move to the next page', error);
+          alert('Failed to move to the next page.');
+        });
       router.push('/intro');
     } else {
       alert('Invalid username or password.');

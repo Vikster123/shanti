@@ -1,6 +1,7 @@
 "use client"
 import React from 'react';
 import Link from 'next/link';
+import NavBar from '../navBar';
 
 const InfoPage = () => {
   // Inline styles
@@ -52,7 +53,7 @@ const InfoPage = () => {
   return (
     <div style={styles.infoPage}>
       {/* Assuming you have an image component or an image file */}
-      <img src="/generate_flower.png"  alt="Logo" width={300} height={300} style={{ marginBottom: '30px' }} />
+      <img src="/generate_flower.png" alt="Logo" width={300} height={300} style={{ marginBottom: '30px' }} />
       <h1 style={styles.title}>{`It's okay to not know how you feel.`}</h1>
 
       <button
@@ -67,16 +68,7 @@ const InfoPage = () => {
       >
         More about emotions
       </button>
-      <div style={styles.bottomNav}>
-        <button style={styles.navButton}>
-        <Link href="/">
-          Home
-          </Link>
-        </button>
-
-        <button style={styles.navButton}>Stats</button>
-        <button style={styles.navButton}>Badges</button>
-      </div>
+      <NavBar />
     </div>
   );
 };

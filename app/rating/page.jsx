@@ -3,6 +3,7 @@ import React from 'react';
 import Link from 'next/link'
 // import { useRouter } from 'next/router';
 import { useRouter } from 'next/navigation';
+import NavBar from '../navBar';
 
 
 const MoodRatingPage = () => {
@@ -81,6 +82,7 @@ const MoodRatingPage = () => {
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
+      textAlign: 'center'
     },
     header: {
       fontSize: '32px',
@@ -129,11 +131,7 @@ const MoodRatingPage = () => {
          </Link>
         <span style={styles.moodIcon}>😊</span>
       </div>
-      <div style={styles.bottomNav}>
-        <button style={styles.navButton}>Home</button>
-        <button style={styles.navButton}>Stats</button>
-        <button style={styles.navButton}>Badges</button>
-      </div>
+     <NavBar/>
     </div>
   );
 };
