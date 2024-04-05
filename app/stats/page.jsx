@@ -2,17 +2,20 @@
 import React, { useState, useEffect } from 'react';
 import { Chart, registerables } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-
+import Link from 'next/link';
+import NavBar from "../navBar"
+import Wrapper from "../wrapper"
 Chart.register(...registerables);
 
 const options = {
   responsive: true,
+  maintainAspectRatio: false,
   plugins: {
     legend: {
-      display: false, 
+      display: false,
     },
     tooltip: {
-      
+
     },
   },
   scales: {
@@ -43,8 +46,10 @@ export default function MoodChart() {
       })
       .then((data) => {
         // Extract days and mood ratings from the data
-        const days = data.data.map(item => `Day ${item.Day}`);
-        const moodRatings = data.data.map(item => item["Mood Rating"]);
+        const loggedInUserName = localStorage.getItem('username')
+        const userData = data.data.filter((item) => item.User === loggedInUserName);
+        const days = userData.map(item => `Day ${item.Day}`);
+        const moodRatings = userData.map(item => item["Mood Rating"]);
         setMoodData({ days, moodRatings });
       })
       .catch((error) => {
@@ -68,15 +73,35 @@ export default function MoodChart() {
     ],
   };
 
+  const styles = {
+    statsPage: {
+      fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
+      color: '#333',
+      textAlign: 'center',
+      padding: '40px',
+      backgroundColor: '#f8f4e4',
+      minHeight: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+    },
+  }
+
   return (
-    <div>
-      {isLoading ? (
-        <p>Loading...</p>
-      ) : message ? (
-        <p>{message}</p>
-      ) : (
-        <Line data={chartData} options={options} />
-      )}
-    </div>
+
+    <Wrapper>
+      <div style={{ display: "flex", flexDirection: "column", width: "100%", height: "90vh", justifyContent: "center" }}>
+        <div style={{ display: 'flex', height: "50vh", justifyContent: "center" }}>
+          {isLoading ? (
+            <p>Loading...</p>
+          ) : message ? (
+            <p>{message}</p>
+          ) : (
+            <Line data={chartData} options={options} />
+          )}
+        </div>
+      </div>
+      <NavBar />
+    </Wrapper>
   );
 }

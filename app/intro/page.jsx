@@ -1,21 +1,28 @@
 "use client"
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useLoginContextData } from '@/context/loginContext';
+import NavBar from '../navBar';
+import Wrapper from "../wrapper"
 
 const HomePage = () => {
   // Replace '[Name]' with the actual logic to retrieve the user's name
-  const userName = 'admin'; 
-  const {loggedInUserName} = useLoginContextData();
+  const userName = 'admin';
+  const { loggedInUserName, loggedInUserData, setLoggedInUserName, setLoggedInUserData } = useLoginContextData();
+  const [disableButton, setDisableButton] = useState(true);
 
   // Inline styles to match the design
   const styles = {
     page: {
-      fontFamily: '"Libre Franklin", Libre',
+      fontFamily: 'Libre Franklin, Libre',
       color: '#000',
       padding: '40px',
       background: '#f8f4e4',
-      minHeight: '100vh',
+      // minHeight: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      textAlign: 'center',
     },
     header: {
       borderBottom: '1px solid #000',
@@ -58,8 +65,47 @@ const HomePage = () => {
     }
   };
 
+  useEffect(() => {
+    if (loggedInUserName) {
+      const today = new Date();
+      const dayList = loggedInUserData.filter((item) => item.Day === today.toISOString().split('T')[0])
+      setDisableButton((dayList.length == 0) ? false : true)
+    }
+  }, [loggedInUserData]);
+
+  useEffect(() => {
+    if (!loggedInUserName) {
+      fetch('https://api.apispreadsheets.com/data/o4uIKexThbokIq3U/', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          const tempLoggedInUserName = localStorage.getItem('username')
+          const tempUserData = data.data.filter((item) => item.User === tempLoggedInUserName);
+          setLoggedInUserName(tempLoggedInUserName)
+          setLoggedInUserData([...tempUserData])
+        })
+        .catch(error => {
+          console.error('Failed to move to the next page', error);
+          alert('Failed to move to the next page.');
+        });
+
+      const today = new Date();
+      const dayList = loggedInUserData.filter((item) => item.Day === today.toISOString().split('T')[0])
+      setDisableButton((dayList.length == 0) ? false : true)
+    }
+  }, []);
+
   return (
-    <div style={styles.page}>
+    <Wrapper>
       <header style={styles.header}>
         <h1>Shanti</h1>
       </header>
@@ -69,23 +115,21 @@ const HomePage = () => {
         <hr />
         <p>How are you feeling today?</p>
         {/* Assuming Track your mood should route to /mood-page */}
-        <button style={styles.trackButton} onClick={() => window.location.href = '/rating'}>
-          Track your mood
-        </button>
+        {!disableButton ?
+          <button style={styles.trackButton} onClick={() => window.location.href = '/rating'}>
+            Track your mood
+          </button>
+          :
+          <button type="button" style={styles.trackButton}>
+            Already Done
+          </button>
+        }
         <p style={styles.infoText}>
           You can only log your mood once a day. Choose your answers wisely!
         </p>
       </main>
-      <div style={styles.bottomNav}>
-        <button style={styles.navButton}>
-        <Link href="/">
-          Home
-          </Link>
-        </button>
-        <button style={styles.navButton}>Stats</button>
-        <button style={styles.navButton}>Badges</button>
-      </div>
-    </div>
+      <NavBar />
+    </Wrapper>
   );
 };
 
