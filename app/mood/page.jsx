@@ -117,7 +117,7 @@ const MoodPage = () => {
       paddingBottom: '20px',
     },
     moodButton: {
-      padding: '15px 0',
+      padding: '10px 0',
       border: '1px solid #000',
       backgroundColor: 'transparent',
       cursor: 'pointer',
