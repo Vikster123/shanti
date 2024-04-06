@@ -3,13 +3,15 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useLoginContextData } from '@/context/loginContext';
 import NavBar from '../navBar';
-import Wrapper from "../wrapper"
+import Wrapper from "../wrapper";
+import { useRouter } from 'next/navigation';
 
 const HomePage = () => {
   // Replace '[Name]' with the actual logic to retrieve the user's name
   const userName = 'admin';
   const { loggedInUserName, loggedInUserData, setLoggedInUserName, setLoggedInUserData } = useLoginContextData();
   const [disableButton, setDisableButton] = useState(true);
+  const router = useRouter();
 
   // Inline styles to match the design
   const styles = {
@@ -120,15 +122,15 @@ const HomePage = () => {
         <hr />
         <p>How are you feeling today?</p>
         {/* Assuming Track your mood should route to /mood-page */}
-        {!disableButton ?
-          <button style={styles.trackButton} onClick={() => window.location.href = '/rating'}>
+        {/* {!disableButton ? */}
+          <button style={styles.trackButton} onClick={() => router.push('/rating')}>
             Track your mood
           </button>
-          :
-          <button type="button" style={styles.trackButton}>
+          {/* : */}
+          {/* <button type="button" style={styles.trackButton}>
             Already Done
           </button>
-        }
+        } */}
         <p style={styles.infoText}>
           You can only log your mood once a day. Choose your answers wisely!
         </p>
