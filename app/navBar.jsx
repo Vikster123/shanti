@@ -52,7 +52,7 @@ export default function NavBar() {
             </button>
             <button style={styles.navButton}>
                 <Link href="/badges">
-                <img src="/badges.png" alt="Badges" style={styles.navImage} />
+                <img src="/EmptyBadge.png" alt="Badges" style={styles.navImage} />
                 </Link>
             </button>
         </div>

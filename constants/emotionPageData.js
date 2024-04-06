@@ -20,12 +20,12 @@ export const pageObject = [
           msg1: 'I am building myself a better life each day.',
           question1: 'What is influencing your excitement?',
           question2: 'Are you excited for someone or something?',
-          pageLabel2: 'How Can I Stay Excited?',
-            subMsg3: 'Do what you love',
-            subMsg4: 'Create a goal',
-            subMsg5: 'Work on a goal you created',
-            subMsg6: 'Do something you wanted to do for a long time',
-            subMsg7: 'Do something kind for someone',
+          pageLabel2: 'How Can I Use my Excited?',
+            subMsg3: 'Make goals for yourself',
+            subMsg4: 'Do something out of your comfort zone',
+            subMsg5: 'Think about the present- what are you excited for right now?',
+            subMsg6: 'Take a walk to a new place',
+            subMsg7: 'Talk to a loved one',
     
           imageUrl:"/image9.png",
           pageUrl: 'https://hackspirit.com/live-a-more-interesting-exciting-life/'
@@ -48,11 +48,11 @@ export const pageObject = [
     'What are you grateful for in your life?',
     
     pageLabel2: 'How Can I Stay Grateful?',
-            subMsg3: 'Do what you love',
-            subMsg4: 'Create a goal',
-            subMsg5: 'Work on a goal you created',
-            subMsg6: 'Do something you wanted to do for a long time',
-            subMsg7: 'Do something kind for someone',
+            subMsg3: 'Find little things to appreciate',
+            subMsg4: 'Be observant of your surroundings',
+            subMsg5: 'Write down what your thanful for',
+            subMsg6: 'Donate to your local community',
+            subMsg7: 'Express how grateful you are to a loved one',
     imageUrl:"/image6.png",
     pageUrl: 'https://kidshealth.org/en/teens/gratitude-practice.html'
     
@@ -76,11 +76,11 @@ export const pageObject = [
     'If so, what are you doing to make your hopes come true?',
     
     pageLabel2: 'How Can I Stay Hopeful?',
-            subMsg3: 'Do what you love',
-            subMsg4: 'Create a goal',
-            subMsg5: 'Work on a goal you created',
-            subMsg6: 'Do something you wanted to do for a long time',
-            subMsg7: 'Do something kind for someone',
+            subMsg3: 'Plan a way to achieve your goals',
+            subMsg4: 'Write about what you are looking forward to',
+            subMsg5: 'Tell someone what you are looking forward to',
+            subMsg6: 'Think positvely',
+            subMsg7: 'Persevere',
     
     imageUrl:"/image7.png",
     pageUrl: 'https://www.samaritans.org/how-we-can-help/if-youre-having-difficult-time/staying-hopeful/'
@@ -104,11 +104,11 @@ export const pageObject = [
             question2:
     'Are the factors of your fear in your control?',
     pageLabel2: 'How Can I Not Be Scared?',
-            subMsg3: 'Do what you love',
-            subMsg4: 'Create a goal',
-            subMsg5: 'Work on a goal you created',
-            subMsg6: 'Do something you wanted to do for a long time',
-            subMsg7: 'Do something kind for someone',
+            subMsg3: 'Meditate',
+            subMsg4: 'Eat a healthy snack',
+            subMsg5: 'Practice yoga',
+            subMsg6: 'Inhale for 4 counts',
+            subMsg7: 'Exhale for 4 counts',
     imageUrl:"/image2.png",
     pageUrl: 'https://kidshealth.org/en/teens/phobias.html#:~:text=People%20can%20overcome%20unnecessary%20fears,sensations%20like%20takeoff%20or%20turbulence'
     
@@ -131,11 +131,11 @@ export const pageObject = [
             question2:
     'Did you tell someone how you feel? ',
     pageLabel2: 'How To Not Be Sad?',
-            subMsg3: 'Do what you love',
-            subMsg4: 'Create a goal',
-            subMsg5: 'Work on a goal you created',
-            subMsg6: 'Do something you wanted to do for a long time',
-            subMsg7: 'Do something kind for someone',
+            subMsg3: 'Do something kind for someone else',
+            subMsg4: 'Learn a new hobby',
+            subMsg5: 'Learn something new',
+            subMsg6: 'Meet a new person',
+            subMsg7: 'Talk to a trusted person',
     imageUrl:"/image4.png",
     pageUrl: 'https://actionforhappiness.org/10-keys?utm_source=google&utm_campaign=AFH-5-10keys&https://actionforhappiness.org/join-us-confirmation/*&gad_source=1'
     
@@ -158,11 +158,11 @@ export const pageObject = [
             question2:
     'Why are you frustrated about it?',
     pageLabel2: 'How do I Not be Frustrated?',
-            subMsg3: 'Do what you love',
-            subMsg4: 'Create a goal',
-            subMsg5: 'Work on a goal you created',
-            subMsg6: 'Do something you wanted to do for a long time',
-            subMsg7: 'Do something kind for someone',
+            subMsg3: 'Meditate for 5 minutes',
+            subMsg4: 'Inhale for 4 counts, hold for 4 counts, exhale for 4 counts',
+            subMsg5: 'Talk to a trusted person',
+            subMsg6: 'Watch a movie',
+            subMsg7: 'Read a book',
     imageUrl:"/image0.png",
     pageUrl: 'https://kidshealth.org/en/teens/happy-life.html'
     
@@ -186,10 +186,10 @@ export const pageObject = [
     'Are you sure you feel the way you think you do?',
     pageLabel2: 'How Do I Not be overwhelmed?',
             subMsg3: 'Do what you love',
-            subMsg4: 'Create a goal',
-            subMsg5: 'Work on a goal you created',
-            subMsg6: 'Do something you wanted to do for a long time',
-            subMsg7: 'Do something kind for someone',
+            subMsg4: 'Meditate',
+            subMsg5: 'Listen to music',
+            subMsg6: 'Journal',
+            subMsg7: 'Doodle',
     imageUrl:"/image1.png",
     pageUrl: 'https://kidshealth.org/en/teens/happy-life.html'
     
@@ -212,11 +212,11 @@ export const pageObject = [
             question2:
     'How do you become calm in tough situations?',
     pageLabel2: 'How Can I Stay Calm?',
-            subMsg3: 'Do what you love',
-            subMsg4: 'Create a goal',
-            subMsg5: 'Work on a goal you created',
-            subMsg6: 'Do something you wanted to do for a long time',
-            subMsg7: 'Do something kind for someone',
+            subMsg3: 'Complete a task on your to-do list',
+            subMsg4: 'Do what you love',
+            subMsg5: 'Treat yourself with a movie, game, or book',
+            subMsg6: 'Listen to soothing music',
+            subMsg7: 'Take rest',
     
     imageUrl:"/image6.png",
     pageUrl: 'https://www.psychologicalhealthcare.com.au/blog/keep-calm-pressure/'
@@ -240,11 +240,11 @@ export const pageObject = [
             question2:
     'How often do you feel left out or lonely?',
     pageLabel2: 'How Do I Not Be Lonely?',
-            subMsg3: 'Do what you love',
-            subMsg4: 'Create a goal',
-            subMsg5: 'Work on a goal you created',
-            subMsg6: 'Do something you wanted to do for a long time',
-            subMsg7: 'Do something kind for someone',
+            subMsg3: 'Listen to music',
+            subMsg4: 'Journal about your feelings',
+            subMsg5: 'Volunteer or do something kind for someone',
+            subMsg6: 'Treat yourself to a movie or a book',
+            subMsg7: 'Hit up your favorite spot',
     imageUrl:"/image3.png",
     pageUrl: 'https://kidshealth.org/en/teens/happy-life.html'
     
