@@ -4,7 +4,7 @@ import Link from 'next/link'
 // import { useRouter } from 'next/router';
 import { useRouter } from 'next/navigation';
 import NavBar from '../navBar';
-
+import Wrapper from '../wrapper';
 
 const MoodRatingPage = () => {
   // Add your own logic to handle mood rating
@@ -137,6 +137,7 @@ const MoodRatingPage = () => {
   };
 
   return (
+    <Wrapper>
     <div style={styles.moodRatingPage}>
       <h1 style={styles.header}>Your Mood Tracker</h1>
       <div style={styles.scale}>
@@ -153,6 +154,7 @@ const MoodRatingPage = () => {
       </div>
      <NavBar/>
     </div>
+    </Wrapper>
   );
 };
 

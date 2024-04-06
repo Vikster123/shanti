@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from 'next/navigation';
 import { useLoginContextData } from '@/context/loginContext';
+import Wrapper from './wrapper';
 
 export default function Home() {
   const [username, setUsername] = useState('');
@@ -154,6 +155,7 @@ export default function Home() {
   };
 
   return (
+    <Wrapper>
     <div style={containerStyle}>
       <div style={loginContainerStyle}>
         <Image src="/generate_flower.png" alt="Logo" width={100} height={100} />
@@ -179,5 +181,6 @@ export default function Home() {
         </form>
       </div>
     </div>
+    </Wrapper>
   );
 }

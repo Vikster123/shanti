@@ -144,12 +144,11 @@ const EmotionDetailPage = () => {
   );
 };
 
-export default EmotionDetailPage
-// export default function Searchbar() {
-//   return (
-//     // You could have a loading skeleton as the `fallback` too
-//     <Suspense>
-//       <EmotionDetailPage />
-//     </Suspense>
-//   )
-// }
+export default function EmotionDetailPageWrapper() {
+  return (
+    // You could have a loading skeleton as the `fallback` too
+    <Suspense>
+      <EmotionDetailPage />
+    </Suspense>
+  )
+}
