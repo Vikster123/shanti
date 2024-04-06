@@ -109,7 +109,7 @@ const EmotionDetailPage = () => {
   return (
     <Wrapper>
       <div style={styles.pageStyles}>
-        <img src={moodData.imageUrl} width={100} height={100} />
+        <img src={moodData.imageUrl} width={300} height={300} />
         <a href={moodData.pageUrl} target="_blank" rel="noopener noreferrer">
       <p >{moodData.pageLabel}</p>
       </a>
