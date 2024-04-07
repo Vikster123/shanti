@@ -95,7 +95,7 @@ export default function Home() {
       User: username, // Only update the username
     };
 
-    fetch('https://api.apispreadsheets.com/data/o4uIKexThbokIq3U/', {
+    fetch('https://api.apispreadsheets.com/data/GihJ1rodL7lT2xP7/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -128,7 +128,7 @@ export default function Home() {
       setLoggedInUserName(userExists.userName);
       setLoggedInUserId(userExists.userId)
       localStorage.setItem('username', userExists.userName)
-      fetch('https://api.apispreadsheets.com/data/o4uIKexThbokIq3U/', {
+      fetch('https://api.apispreadsheets.com/data/GihJ1rodL7lT2xP7/', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

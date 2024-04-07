@@ -23,7 +23,7 @@ const MoodRatingPage = () => {
       'Mood Rating': moodRating
     };
 
-    const resp = fetch('https://api.apispreadsheets.com/data/o4uIKexThbokIq3U/', {
+    const resp = fetch('https://api.apispreadsheets.com/data/GihJ1rodL7lT2xP7/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

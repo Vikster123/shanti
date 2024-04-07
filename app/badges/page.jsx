@@ -76,7 +76,7 @@ const BadgePage = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch("https://api.apispreadsheets.com/data/o4uIKexThbokIq3U/")
+    fetch("https://api.apispreadsheets.com/data/GihJ1rodL7lT2xP7/")
       .then((response) => {
         if (response.ok) {
           return response.json();

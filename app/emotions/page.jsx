@@ -42,8 +42,8 @@ const EmotionDetailPage = () => {
     },
     pageStyles: {
       background: '#f5f5dc', // This is a beige color, adjust as needed
-      minHeight: '60vh', // Ensure the background color covers the whole page
-      paddingTop: '20px', // Adjust padding as needed
+      minHeight: '40vh', // Ensure the background color covers the whole page
+      paddingTop: '0px', // Adjust padding as needed
       boxSizing: 'border-box', // Make sure paddings don't affect the width calculations
       display: 'flex',
       flexDirection: 'column',
@@ -66,7 +66,7 @@ const EmotionDetailPage = () => {
       return; // Exit the function if no user is found
     }
 
-    fetch('https://api.apispreadsheets.com/data/o4uIKexThbokIq3U/', {
+    fetch('https://api.apispreadsheets.com/data/GihJ1rodL7lT2xP7/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -109,7 +109,7 @@ const EmotionDetailPage = () => {
   return (
     <Wrapper>
       <div style={styles.pageStyles}>
-        <img src={moodData.imageUrl} width={300} height={300} />
+        <img src={moodData.imageUrl} width={100} height={100} />
         <a href={moodData.pageUrl} target="_blank" rel="noopener noreferrer">
       <p >{moodData.pageLabel}</p>
       </a>
