@@ -12,8 +12,8 @@ const InfoPage = () => {
 
   const styles = {
     infoPage: {
-      fontFamily: 'Times New Roman, serif',
-      color: '#333',
+      fontFamily: 'Garamond, Georgia, serif',
+      color: '#1a4548',
       padding: '40px',
       background: '#f8f4e4',
       minHeight: '100vh',
@@ -43,7 +43,7 @@ const InfoPage = () => {
       width: '100%', // Full width
       display: 'flex',
       justifyContent: 'space-around',
-      borderTop: '1px solid #000',
+      borderTop: '1px solid #1a4548',
       backgroundColor: '#f8f4e4', // Match the background color of your app
     },
     navButton: {

@@ -33,7 +33,7 @@ const EmotionDetailPage = () => {
       padding: '10px',
       textAlign: 'center',
       backgroundColor: 'transparent',
-      border: '1px solid #000',
+      border: '1px solid #1a4548',
       cursor: 'pointer',
       fontSize: '18px',
       display: 'block',

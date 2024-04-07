@@ -30,8 +30,8 @@ const BadgePage = () => {
   ])
   const styles = {
     badgePage: {
-      fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
-      color: '#333',
+      fontFamily: 'Garamond, Georgia, serif',
+      color: '#1a4548',
       textAlign: 'center',
       padding: '40px',
       backgroundColor: '#f8f4e4',
@@ -62,7 +62,7 @@ const BadgePage = () => {
       position: 'absolute',
       bottom: '0',
       width: '100%',
-      borderTop: '1px solid #000',
+      borderTop: '1px solid #1a4548',
       paddingTop: '10px',
     },
     navButton: {
@@ -70,7 +70,7 @@ const BadgePage = () => {
       fontSize: '18px',
       border: 'none',
       background: 'none',
-      color: '#333',
+      color: '#1a4548',
     },
   };
 

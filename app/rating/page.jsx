@@ -73,8 +73,8 @@ const MoodRatingPage = () => {
   // Inline styles
   const styles = {
     moodRatingPage: {
-      fontFamily: 'Libre Franklin',
-      color: '#333',
+      fontFamily: 'Garamond, Georgia, serif',
+      color: '#1a4548',
       padding: '40px',
       background: '#f8f4e4',
       minHeight: '100vh',
@@ -105,7 +105,7 @@ const MoodRatingPage = () => {
     scaleButton: {
       // Define styles for the scale buttons here
       background: 'none', // No background to make it transparent
-      border: '2px solid #333', // Solid border with the color of your choice
+      border: '2px solid #1a4548', // Solid border with the color of your choice
       borderRadius: '50%', // Circular buttons
       width: '40px', // Width of the button (increase for larger buttons)
       height: '40px', // Height of the button (increase for larger buttons)
@@ -122,7 +122,7 @@ const MoodRatingPage = () => {
       width: '100%', // Full width
       display: 'flex',
       justifyContent: 'space-around',
-      borderTop: '1px solid #000',
+      borderTop: '1px solid #1a4548',
       backgroundColor: '#f8f4e4', // Match the background color of your app
     },
     navImage: {

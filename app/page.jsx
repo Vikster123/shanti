@@ -13,7 +13,7 @@ export default function Home() {
 
 
   const containerStyle = {
-    fontFamily: "'Arial', sans-serif",
+    fontFamily: "Garamond, Georgia, serif",
     backgroundColor: "#f8f4e4",
     display: "flex",
     flexDirection: "column",

@@ -15,13 +15,13 @@ export default function NavBar() {
             width: '100%',
             display: 'flex',
             justifyContent: 'space-around',
-            borderTop: '1px solid #000',
+            borderTop: '1px solid #1a4548',
         },
         navigation: {
             position: 'absolute',
             bottom: '0',
             width: '100%',
-            borderTop: '1px solid #000',
+            borderTop: '1px solid #1a4548',
             paddingTop: '10px',
         },
         navImage: {
@@ -34,7 +34,7 @@ export default function NavBar() {
             fontSize: '18px',
             border: 'none',
             background: 'none',
-            color: '#333',
+            color: '#1a4548',
         },
     }
 
@@ -52,7 +52,7 @@ export default function NavBar() {
             </button>
             <button style={styles.navButton}>
                 <Link href="/badges">
-                <img src="/EmptyBadge.png" alt="Badges" style={styles.navImage} />
+                <img src="/NavBadge.png" alt="Badges" style={styles.navImage} />
                 </Link>
             </button>
         </div>

@@ -95,15 +95,15 @@ const MoodPage = () => {
 
   const styles = {
     moodPage: {
-      fontFamily: 'Times New Roman, serif',
-      color: '#000',
+      fontFamily: 'Garamond, Georgia, serif',
+      color: '#1a4548',
       padding: '40px',
       background: '#f8f4e4',
       minHeight: '200vh',
     },
     header: {
       textAlign: 'center',
-      borderBottom: '1px solid #000',
+      borderBottom: '1px solid #1a4548',
     },
     mainHeading: {
       textAlign: 'center',
@@ -118,7 +118,7 @@ const MoodPage = () => {
     },
     moodButton: {
       padding: '10px 0',
-      border: '1px solid #000',
+      border: '1px solid #1a4548',
       backgroundColor: 'transparent',
       cursor: 'pointer',
       fontSize: '18px',
@@ -126,14 +126,14 @@ const MoodPage = () => {
       borderRadius: '0',
     },
     selected: {
-      backgroundColor: '#000',
+      backgroundColor: '#1a4548',
       color: '#fff',
     },
     dontKnowButton: {
       padding: '10px',
       textAlign: 'center',
       backgroundColor: 'transparent',
-      border: '1px solid #000',
+      border: '1px solid #1a4548',
       cursor: 'pointer',
       fontSize: '18px',
       display: 'block',
@@ -147,7 +147,7 @@ const MoodPage = () => {
       width: '100%', // Full width
       display: 'flex',
       justifyContent: 'space-around',
-      borderTop: '1px solid #000',
+      borderTop: '1px solid #1a4548',
       backgroundColor: '#f8f4e4', // Match the background color of your app
     },
     navButton: {

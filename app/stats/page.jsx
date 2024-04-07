@@ -75,8 +75,8 @@ export default function MoodChart() {
 
   const styles = {
     statsPage: {
-      fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
-      color: '#333',
+      fontFamily: 'Garamond, Georgia, serif',
+      color: '#1a4548',
       textAlign: 'center',
       padding: '40px',
       backgroundColor: '#f8f4e4',

@@ -6,8 +6,8 @@ import { useRouter, usePathname } from 'next/navigation';
 const Wrapper = (props) => {
   const styles = {
     wrapper: {
-      fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
-      color: '#333',
+      fontFamily: 'Garamond, Georgia, serif',
+      color: '#1a4548',
       textAlign: 'center',
       backgroundColor: '#f8f4e4',
       minHeight: '100vh',

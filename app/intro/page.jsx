@@ -16,8 +16,8 @@ const HomePage = () => {
   // Inline styles to match the design
   const styles = {
     page: {
-      fontFamily: 'Libre Franklin, Libre',
-      color: '#000',
+      fontFamily: 'Garamond, Georgia, serif',
+      color: '#1a4548',
       padding: '40px',
       background: '#f8f4e4',
       // minHeight: '100vh',
@@ -27,7 +27,7 @@ const HomePage = () => {
       textAlign: 'center',
     },
     header: {
-      borderBottom: '1px solid #000',
+      borderBottom: '1px solid #1a4548',
       paddingBottom: '20px',
       marginBottom: '40px',
       textAlign: 'center',
@@ -41,7 +41,7 @@ const HomePage = () => {
     },
     trackButton: {
       backgroundColor: '#C6E0D3',
-      color: '#000',
+      color: '#1a4548',
       padding: '10px 20px',
       border: 'none',
       borderRadius: '5px',
@@ -59,7 +59,7 @@ const HomePage = () => {
       width: '100%',
       display: 'flex',
       justifyContent: 'space-around',
-      borderTop: '1px solid #000',
+      borderTop: '1px solid #1a4548',
     },
     navImage: {
       // You might want to set a specific width and height for your image
