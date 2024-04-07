@@ -186,7 +186,7 @@ const MoodPage = () => {
       subMsg5: 'Work on a goal you created',
       subMsg6: 'Do something you wanted to do for a long time',
       subMsg7: 'Do something kind for someone',
-      imageUrl: "/Image1.png"
+      imageUrl: "/image1.png"
     },
     {
       pageLabel: 'EXCITED',
@@ -200,7 +200,7 @@ const MoodPage = () => {
       subMsg5: 'Think about the present- what are you excited for right now',
       subMsg6: 'Share your excitement with others',
       subMsg7: 'Take a walk to your new place',
-      imageUrl: "/Image2.png"
+      imageUrl: "/image2.png"
     },
     {
 
@@ -225,7 +225,7 @@ const MoodPage = () => {
       subMsg5: 'Work on a goal you created',
       subMsg6: 'Do something you wanted to do for a long time',
       subMsg7: 'Do something kind for someone',
-      imageUrl: "/Image3.png"
+      imageUrl: "/image3.png"
 
     },
 
@@ -253,7 +253,7 @@ const MoodPage = () => {
       subMsg6: 'Do something you wanted to do for a long time',
       subMsg7: 'Do something kind for someone',
 
-      imageUrl: "/Image4.png"
+      imageUrl: "/image4.png"
 
     },
 
@@ -279,7 +279,7 @@ const MoodPage = () => {
       subMsg5: 'Work on a goal you created',
       subMsg6: 'Do something you wanted to do for a long time',
       subMsg7: 'Do something kind for someone',
-      imageUrl: "/Image5.png"
+      imageUrl: "/image5.png"
 
     },
 
@@ -305,7 +305,7 @@ const MoodPage = () => {
       subMsg5: 'Work on a goal you created',
       subMsg6: 'Do something you wanted to do for a long time',
       subMsg7: 'Do something kind for someone',
-      imageUrl: "/Image6.png"
+      imageUrl: "/image6.png"
 
     },
 
@@ -331,7 +331,7 @@ const MoodPage = () => {
       subMsg5: 'Work on a goal you created',
       subMsg6: 'Do something you wanted to do for a long time',
       subMsg7: 'Do something kind for someone',
-      imageUrl: "/Image7.png"
+      imageUrl: "/image7.png"
 
     },
 
@@ -357,7 +357,7 @@ const MoodPage = () => {
       subMsg5: 'Work on a goal you created',
       subMsg6: 'Do something you wanted to do for a long time',
       subMsg7: 'Do something kind for someone',
-      imageUrl: "/Image8.png"
+      imageUrl: "/image8.png"
 
     },
 
@@ -384,7 +384,7 @@ const MoodPage = () => {
       subMsg6: 'Do something you wanted to do for a long time',
       subMsg7: 'Do something kind for someone',
 
-      imageUrl: "/Image8.png"
+      imageUrl: "/image8.png"
 
     },
 
@@ -410,7 +410,7 @@ const MoodPage = () => {
       subMsg5: 'Work on a goal you created',
       subMsg6: 'Do something you wanted to do for a long time',
       subMsg7: 'Do something kind for someone',
-      imageUrl: "/Image9.png"
+      imageUrl: "/image9.png"
 
     },
     {
@@ -435,7 +435,7 @@ pageLabel2: 'How to express your feelings',
       subMsg5: 'Go on a walk',
       subMsg6: 'Do something you wanted to do for a long time',
       subMsg7: 'Join a club',
-imageUrl:"/Image9.png",
+imageUrl:"/image9.png",
 pageUrl: 'https://kidshealth.org/en/teens/happy-life.html'
 
   }
