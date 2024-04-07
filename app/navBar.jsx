@@ -10,7 +10,7 @@ export default function NavBar() {
 
     const styles = {
         bottomNav: {
-            position: 'absolute',
+            position: 'flex',
             bottom: '0',
             width: '100%',
             display: 'flex',
@@ -18,7 +18,7 @@ export default function NavBar() {
             borderTop: '1px solid #1a4548',
         },
         navigation: {
-            position: 'absolute',
+            position: 'flex',
             bottom: '0',
             width: '100%',
             borderTop: '1px solid #1a4548',
