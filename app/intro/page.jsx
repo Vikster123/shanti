@@ -122,15 +122,15 @@ const HomePage = () => {
         <hr />
         <p>How are you feeling today?</p>
         {/* Assuming Track your mood should route to /mood-page */}
-        {/* {!disableButton ? */}
+        {!disableButton ?
           <button style={styles.trackButton} onClick={() => router.push('/rating')}>
             Track your mood
           </button>
-          {/* : */}
-          {/* <button type="button" style={styles.trackButton}>
+          :
+          <button type="button" style={styles.trackButton}>
             Already Done
           </button>
-        } */}
+        }
         <p style={styles.infoText}>
           You can only log your mood once a day. Choose your answers wisely!
         </p>
