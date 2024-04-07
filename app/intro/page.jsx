@@ -81,7 +81,7 @@ const HomePage = () => {
   }, [loggedInUserData]);
 
   useEffect(() => {
-    if (!loggedInUserName) {
+    // if (loggedInUserName) {
       fetch('https://api.apispreadsheets.com/data/GihJ1rodL7lT2xP7/', {
         method: 'GET',
         headers: {
@@ -108,7 +108,7 @@ const HomePage = () => {
       const today = new Date();
       const dayList = loggedInUserData.filter((item) => item.Day === today.toISOString().split('T')[0])
       setDisableButton((dayList.length == 0) ? false : true)
-    }
+    // }
   }, []);
 
   return (
