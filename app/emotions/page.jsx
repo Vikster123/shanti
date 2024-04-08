@@ -140,6 +140,12 @@ const EmotionDetailPage = () => {
         {moodData.journalLink ? 
           <p ><a href={moodData.journalLink} target='_blank'>Journal</a> about your feelings.</p> 
         : ''}
+         {moodData.idkUrl1 ? 
+          <p ><a href={moodData.idkUrl1} target='_blank'>How do I know what I'm feeling?</a> </p> 
+        : ''}
+         {moodData.idkUrl2 ? 
+          <p ><a href={moodData.idkUrl2} target='_blank'>More about emotions</a> </p> 
+        : ''}
         {moodData.subMsg3 ? <p >{moodData.subMsg3}</p> : ''}
         {moodData.subMsg4 ? <p >{moodData.subMsg4}</p> : ''}
         {moodData.subMsg5 ? <p >{moodData.subMsg5}</p> : ''}
