@@ -22,7 +22,7 @@ export const pageObject = [
           subMsg2:'Something to think about...',
           question1: 'What is influencing your excitement?',
           question2: 'Are you excited for someone or something?',
-          pageLabel2: 'How Can I Use my Excited?',
+          pageLabel2: 'How Can I Use my Excitement?',
             subMsg3: 'Make goals for yourself',
             subMsg4: 'Do something out of your comfort zone',
             subMsg5: 'Think about the present- what are you excited for right now?',
@@ -54,10 +54,10 @@ export const pageObject = [
             subMsg3: 'Find little things to appreciate',
             subMsg4: 'Be observant of your surroundings',
             subMsg5: 'Write down what your thanful for',
-            subMsg6: 'Donate to your local community',
-            subMsg7: 'Express how grateful you are to a loved one',
-    imageUrl:"/image6.png",
-    pageUrl: 'https://kidshealth.org/en/teens/gratitude-practice.html'
+            subMsg6: 'Express how grateful you are to a loved one',
+            subMsg7: '',
+    imageUrl:"/image8.png",
+    pageUrl: 'https://missionshanti.org/'
     
         },
     
@@ -84,8 +84,8 @@ export const pageObject = [
             subMsg3: 'Plan a way to achieve your goals',
             subMsg4: 'Write about what you are looking forward to',
             subMsg5: 'Tell someone what you are looking forward to',
-            subMsg6: 'Think positvely',
-            subMsg7: 'Persevere',
+            subMsg6: '',
+            subMsg7: '',
     
     imageUrl:"/image7.png",
     pageUrl: 'https://www.samaritans.org/how-we-can-help/if-youre-having-difficult-time/staying-hopeful/'
@@ -115,7 +115,7 @@ export const pageObject = [
             subMsg5: 'Practice yoga',
             subMsg6: 'Inhale for 4 counts',
             subMsg7: 'Exhale for 4 counts',
-    imageUrl:"/image2.png",
+    imageUrl:"/image4.png",
     pageUrl: 'https://kidshealth.org/en/teens/phobias.html#:~:text=People%20can%20overcome%20unnecessary%20fears,sensations%20like%20takeoff%20or%20turbulence'
     
         },
@@ -138,7 +138,7 @@ export const pageObject = [
     
             question2:
     'Did you tell someone how you feel? ',
-    pageLabel2: 'How To Not Be Sad?',
+    pageLabel2: 'How Can I Feel Better?',
             subMsg3: 'Do something kind for someone else',
             subMsg4: 'Learn a new hobby',
             subMsg5: 'Learn something new',
@@ -165,14 +165,14 @@ export const pageObject = [
     
             question2:
     'Why are you frustrated about it?',
-    pageLabel2: 'How do I Not be Frustrated?',
+    pageLabel2: 'How can I feel better?',
             subMsg3: 'Meditate for 5 minutes',
             subMsg4: 'Inhale for 4 counts, hold for 4 counts, exhale for 4 counts',
             subMsg5: 'Talk to a trusted person',
             subMsg6: 'Watch a movie',
             subMsg7: 'Read a book',
-    imageUrl:"/image0.png",
-    pageUrl: 'https://kidshealth.org/en/teens/happy-life.html'
+    imageUrl:"/image2.png",
+    pageUrl: 'https://myhealth.alberta.ca/Health/pages/conditions.aspx?hwid=aa129092'
     
         },
     
@@ -201,7 +201,7 @@ export const pageObject = [
             subMsg6: 'Journal',
             subMsg7: 'Doodle',
     imageUrl:"/image1.png",
-    pageUrl: 'https://kidshealth.org/en/teens/happy-life.html'
+    pageUrl: 'https://socaladolescentwellness.com/how-to-manage-teen-anxiety-and-overwhelm-not-just-for-teens/'
     
         },
     
@@ -226,8 +226,8 @@ export const pageObject = [
             subMsg3: 'Complete a task on your to-do list',
             subMsg4: 'Do what you love',
             subMsg5: 'Treat yourself with a movie, game, or book',
-            subMsg6: 'Listen to soothing music',
-            subMsg7: 'Take rest',
+            subMsg6: '',
+            subMsg7: '',
     
     imageUrl:"/image6.png",
     pageUrl: 'https://www.psychologicalhealthcare.com.au/blog/keep-calm-pressure/'
@@ -270,23 +270,23 @@ export const pageObject = [
                 subMsg:
           '',
 
-          subMsg2:"Something to think about...",
+          subMsg2:"",
           
                 msg1:
-          'Its ok to not know how you feel',
+          'How do I know what I am feeling?',
           
                 question1:
-          'Do you have mixed feelings right now?',
+          'More about emotions',
           
                 question2:
-          'How often do you feel this way?',
-          pageLabel2: 'How to express your feelings',
-                subMsg3: 'Journal',
-                subMsg4: 'Talk to a loved one',
-                subMsg5: 'Go on a walk',
-                subMsg6: 'Do something you wanted to do for a long time',
-                subMsg7: 'Join a club',
-          imageUrl:"/image10.png",
+          '',
+          pageLabel2: '',
+                subMsg3: '',
+                subMsg4: '',
+                subMsg5: '',
+                subMsg6: '',
+                subMsg7: '',
+          imageUrl:"/image0.png",
           pageUrl: 'https://kidshealth.org/en/teens/emotional-awareness.html'
           
             }
