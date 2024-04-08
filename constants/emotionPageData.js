@@ -3,6 +3,7 @@ export const pageObject = [
           pageLabel: 'HAPPY',
           subMsg: 'A little reminder:',
           msg1: 'The perfect moment is right now. You got this!',
+          subMsg2:"Something to think about...",
           question1: 'What makes you feel happy or joyful?',
           question2: 'What have you done to make you feel happy?',
           pageLabel2: 'How Can I Stay Happy?',
@@ -18,6 +19,7 @@ export const pageObject = [
           pageLabel: 'EXCITED',
           subMsg: 'An affirmation for you.',
           msg1: 'I am building myself a better life each day.',
+          subMsg2:'Something to think about...',
           question1: 'What is influencing your excitement?',
           question2: 'Are you excited for someone or something?',
           pageLabel2: 'How Can I Use my Excited?',
@@ -40,6 +42,7 @@ export const pageObject = [
     
           msg1:
     'I am grateful for things that bring me joy.',
+        subMsg2:"Something to think about...",
     
           question1:
     'What are you grateful for right now?',
@@ -68,6 +71,8 @@ export const pageObject = [
     
             msg1:
     'You have what it takes to achieve anything you set your mind to.',
+        subMsg2:"Something to think about...",
+
     
             question1:
     'Are you taking action to make your hopes come true?',
@@ -97,6 +102,7 @@ export const pageObject = [
     
             msg1:
     'You are in control of your life and emotions.',
+        subMsg2:"Something to think about...",
     
             question1:
     'What are you scared or worried about?',
@@ -124,9 +130,11 @@ export const pageObject = [
     
             msg1:
     'I trust that I am on the right path.',
+        subMsg2:"Something to think about...",
     
             question1:
     'What or who is driving your sadness?',
+
     
             question2:
     'Did you tell someone how you feel? ',
@@ -148,7 +156,7 @@ export const pageObject = [
     
             subMsg:
     '',
-    
+    subMsg2:"Something to think about...",
             msg1:
     'It’s okay to feel frustrated.Other people feel frustrated too.',
     
@@ -178,6 +186,8 @@ export const pageObject = [
     
             msg1:
     'You are confident and capable. Don’t sweat it. You got this.',
+
+    subMsg2:"Something to think about...",
     
             question1:
     'Why do you feel the way you do?',
@@ -206,6 +216,7 @@ export const pageObject = [
             msg1:
     'Calm is a sense of peacefulness. The perfect time to get things done.',
     
+    subMsg2:"Something to think about...",
             question1:
     'What caused you to feel calm?',
     
@@ -233,6 +244,8 @@ export const pageObject = [
     
             msg1:
     'You are loved. Your loneliness will pass.',
+
+    subMsg2:"Something to think about...",
     
             question1:
     'Why are you feeling lonely right now?',
@@ -256,6 +269,8 @@ export const pageObject = [
           
                 subMsg:
           '',
+
+          subMsg2:"Something to think about...",
           
                 msg1:
           'Its ok to not know how you feel',

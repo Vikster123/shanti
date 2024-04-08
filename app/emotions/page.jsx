@@ -114,6 +114,9 @@ const EmotionDetailPage = () => {
       <p >{moodData.pageLabel}</p>
       </a>
         <p >{moodData.subMsg}</p>
+        <p>{moodData.subMsg2}</p>
+        <p>{moodData.question1}</p>
+        <p>{moodData.question2}</p>
         <p >{moodData.msg1}</p>
         <p>{moodData.pageLabel2}</p>
         <p >{moodData.subMsg3}</p>
