@@ -18,11 +18,15 @@ export default function NavBar() {
             borderTop: '1px solid #1a4548',
         },
         navigation: {
-            position: 'flex',
+            position: 'fixed',
             bottom: '0',
+            right: '0',
+            left: '0',
             width: '100%',
-            borderTop: '1px solid #1a4548',
             paddingTop: '10px',
+            display: 'flex',
+            justifyContent: 'space-evenly',
+            backgroundColor: '#C6E0D3'
         },
         navImage: {
             // You might want to set a specific width and height for your image

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from 'next/navigation';
 import { useLoginContextData } from '@/context/loginContext';
 import Wrapper from './wrapper';
+import {userCredentials} from '../constants/user';
 
 export default function Home() {
   const [username, setUsername] = useState('');
@@ -54,35 +55,6 @@ export default function Home() {
     cursor: "pointer",
     fontSize: "16px",
   };
-
-  const userCredentials = [
-    { userName: "user1", userId: 1, password: "password1" },
-    { userName: "user2", userId: 2, password: "password2" },
-    { userName: "user3", userId: 3, password: "password3" },
-    { userName: "user4", userId: 4, password: "password4" },
-    { userName: "user5", userId: 5, password: "password5" },
-    { userName: "user6", userId: 6, password: "password6" },
-    { userName: "user7", userId: 7, password: "password7" },
-    { userName: "user8", userId: 8, password: "password8" },
-    { userName: "user9", userId: 9, password: "password9" },
-    { userName: "user10", userId: 10, password: "password10" },
-    { userName: "user11", userId: 11, password: "password11" },
-    { userName: "user12", userId: 12, password: "password12" },
-    { userName: "user13", userId: 13, password: "password13" },
-    { userName: "user14", userId: 14, password: "password14" },
-    { userName: "user15", userId: 15, password: "password15" },
-    { userName: "user16", userId: 16, password: "password16" },
-    { userName: "user17", userId: 17, password: "password17" },
-    { userName: "user18", userId: 18, password: "password18" },
-    { userName: "user19", userId: 19, password: "password19" },
-    { userName: "user20", userId: 20, password: "password20" },
-    { userName: "user21", userId: 21, password: "password21" },
-    { userName: "user22", userId: 22, password: "password22" },
-    { userName: "user23", userId: 23, password: "password23" },
-    { userName: "user24", userId: 24, password: "password24" },
-    { userName: "user25", userId: 25, password: "password25" }
-  ]
-
 
   // const handleLogin = async (event) => {
   //   event.preventDefault();

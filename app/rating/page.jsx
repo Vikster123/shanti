@@ -77,15 +77,10 @@ const MoodRatingPage = () => {
       color: '#1a4548',
       padding: '40px',
       background: '#f8f4e4',
-      minHeight: '100vh',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
       textAlign: 'center'
     },
     header: {
-      fontSize: '32px',
+      fontSize: '20px',
       textAlign: 'center',
       marginBottom: '20px',
     },
@@ -98,6 +93,7 @@ const MoodRatingPage = () => {
       alignItems: 'center',
       width: '100%',
       maxWidth: '600px',
+      marginTop: '40px'
     },
     moodIcon: {
       // Add your styles for the mood icons
@@ -139,7 +135,10 @@ const MoodRatingPage = () => {
   return (
     <Wrapper>
     <div style={styles.moodRatingPage}>
-      <h1 style={styles.header}>Your Mood Tracker</h1>
+      <header style={styles.header}>
+        <h1>Your Mood Tracker</h1>
+      </header>
+      <h1 style={styles.header}>On a scale of 1 to 10, how are you feeling today?</h1>
       <div style={styles.scale}>
         {/* Replace with icons or images */}
         <span style={styles.moodIcon}>😟</span>

@@ -11,7 +11,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <HeadTag></HeadTag>
-      <body><LoginContextProvider>{children}</LoginContextProvider></body>
+      <body style={{backgroundColor: '#f8f4e4', paddingBottom: '75px'}}><LoginContextProvider>{children}</LoginContextProvider></body>
     </html>
   )
 }

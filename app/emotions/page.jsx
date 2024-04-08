@@ -30,29 +30,25 @@ const EmotionDetailPage = () => {
   // Define the styles here
   const styles = {
     dontKnowButton: {
-      padding: '10px',
-      textAlign: 'center',
-      backgroundColor: 'transparent',
-      border: '1px solid #1a4548',
+      backgroundColor: '#C6E0D3',
+      color: '#1a4548',
+      padding: '10px 20px',
+      border: 'none',
+      borderRadius: '5px',
       cursor: 'pointer',
       fontSize: '18px',
-      display: 'block',
-      width: 'auto',
-      margin: '5px 5px',
+      margin: '20px 0',
     },
     pageStyles: {
-      background: '#f5f5dc', // This is a beige color, adjust as needed
-      minHeight: '40vh', // Ensure the background color covers the whole page
       paddingTop: '0px', // Adjust padding as needed
       boxSizing: 'border-box', // Make sure paddings don't affect the width calculations
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
+      fontSize: '18px',
+      fontWeight: 'bold'
     },
     buttonDiv: {
       display: 'flex',
-      flexDirection: 'row'
+      flexDirection: 'row',
+      justifyContent: 'space-evenly'
     }
   }
 
@@ -115,30 +111,43 @@ const EmotionDetailPage = () => {
       </a>
         <p >{moodData.subMsg}</p>
         <p >{moodData.msg1}</p>
-        <p>{moodData.pageLabel2}</p>
-        <p >{moodData.subMsg3}</p>
-        <p >{moodData.subMsg4}</p>
-        <p >{moodData.subMsg5}</p>
-        <p >{moodData.subMsg6}</p>
-        <p >{moodData.subMsg7}</p>
+        <h1>Something to Think About...</h1>
+        <p >{moodData.question1}</p>
+        <p >{moodData.question2}</p>
+        {!rightMood &&
+          <div style={styles.buttonDiv}>
+            <button
+              onClick={handleDontKnowClick}
+              style={styles.dontKnowButton}
+            >
+              Not the right mood ?
+            </button>
+            <button
+              onClick={handleRightMoodClick}
+              style={styles.dontKnowButton}
+            >
+              Right mood
+            </button>
+          </div>
+        }
+        <h1>{moodData.pageLabel2}</h1>
+        {moodData.meditateLink ? 
+          <p ><a href={moodData.meditateLink} target='_blank'>Meditate</a> for 5 minutes.</p> 
+        : ''}
+        {moodData.musicLink ? 
+          <p >Listen to <a href={moodData.musicLink} target='_blank'>Music</a>.</p> 
+        : ''}
+        {moodData.journalLink ? 
+          <p ><a href={moodData.journalLink} target='_blank'>Journal</a> about your feelings.</p> 
+        : ''}
+        {moodData.subMsg3 ? <p >{moodData.subMsg3}</p> : ''}
+        {moodData.subMsg4 ? <p >{moodData.subMsg4}</p> : ''}
+        {moodData.subMsg5 ? <p >{moodData.subMsg5}</p> : ''}
+        {moodData.subMsg6 ? <p >{moodData.subMsg6}</p> : ''}
+        {moodData.subMsg7 ? <p >{moodData.subMsg7}</p>: ''}
         {/* ... other mood data ... */}
       </div>
-      {!rightMood &&
-        <div style={styles.buttonDiv}>
-          <button
-            onClick={handleDontKnowClick}
-            style={styles.dontKnowButton}
-          >
-            Not the right mood ?
-          </button>
-          <button
-            onClick={handleRightMoodClick}
-            style={styles.dontKnowButton}
-          >
-            Right mood ?
-          </button>
-        </div>
-      }
+      
       <NavBar />
     </Wrapper >
   );

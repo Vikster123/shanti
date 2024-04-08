@@ -8,12 +8,7 @@ const Wrapper = (props) => {
     wrapper: {
       fontFamily: 'Garamond, Georgia, serif',
       color: '#1a4548',
-      textAlign: 'center',
-      backgroundColor: '#f8f4e4',
-      minHeight: '100vh',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
+      textAlign: 'center'
     },
   };
   const { loggedInUserName } = useLoginContextData();
