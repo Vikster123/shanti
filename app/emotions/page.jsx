@@ -111,7 +111,7 @@ const EmotionDetailPage = () => {
       </a>
         <p >{moodData.subMsg}</p>
         <p >{moodData.msg1}</p>
-        <h1>Something to Think About...</h1>
+        {moodData.pageLabel !== "I DONT KNOW" && <h1>Something to Think About...</h1>}
         <p >{moodData.question1}</p>
         <p >{moodData.question2}</p>
         {!rightMood &&
