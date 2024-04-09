@@ -62,7 +62,7 @@ const InfoPage = () => {
         style={styles.button}
         onClick={() => handleExternalLink('https://kidshealth.org/en/teens/emotional-awareness.html')}
       >
-        How do I know what I’m feeling?
+        {`How do I know what I’m feeling?`}
       </button>
       <button
         style={styles.button}

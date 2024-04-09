@@ -141,7 +141,7 @@ const EmotionDetailPage = () => {
           <p ><a href={moodData.journalLink} target='_blank'>Journal</a> about your feelings.</p> 
         : ''}
          {moodData.idkUrl1 ? 
-          <p ><a href={moodData.idkUrl1} target='_blank'>How do I know what I'm feeling?</a> </p> 
+          <p ><a href={moodData.idkUrl1} target='_blank'>{`How do I know what I'm feeling?`}</a> </p> 
         : ''}
          {moodData.idkUrl2 ? 
           <p ><a href={moodData.idkUrl2} target='_blank'>More about emotions</a> </p> 
