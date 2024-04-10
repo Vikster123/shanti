@@ -59,9 +59,15 @@ const MoodRatingPage = () => {
     }
     // Update the spreadsheet with the mood rating and username
     // updateSpreadsheet(username, rating);
-    const today = new Date();
+    const getLocalDate = () => {
+        let date = new Date();
+        let year = date.getFullYear();
+        let month = String(date.getMonth() + 1).padStart(2, '0');
+        let day = String(date.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    };
     const userData  = {
-        Day: today.toISOString().split('T')[0],
+        Day: getLocalDate(),
         User: username,
         'Mood Rating': rating,
         'emotion':''
